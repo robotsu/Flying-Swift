@@ -10,11 +10,22 @@ import UIKit
 import QuartzCore
 
 class ViewController: UIViewController {
+    var flying = false
     @IBOutlet var swiftImg : UIImageView
     @IBOutlet var hiButton : UIButton
     @IBAction func hiButtonClicked(sender : AnyObject) {
-        fly()
-        hiButton.hidden = true
+        if (flying) {
+            stopfly()
+        }else{
+            fly()
+        }
+    }
+    @IBAction func demoButtonClicked(sender : AnyObject) {
+        stopfly()
+    }
+    
+    func stopfly() {
+        swiftImg.layer.removeAnimationForKey("position")
     }
     
     func fly() {
@@ -37,20 +48,28 @@ class ViewController: UIViewController {
 
     }
     
+    override func animationDidStart(anim: CAAnimation!){
+        hiButton.setTitle("Stop fly", forState:nil)
+        flying = true
+    }
+    
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool){
-        hiButton.hidden = false
+        hiButton.setTitle("Touch to fly", forState:nil)
+        flying = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        hiButton.setTitle("Click to fly", forState:nil)
+        hiButton.setTitle("Touch to fly", forState:nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prefersStatusBarHidden() -> Bool { return true; }
 
 }
 
