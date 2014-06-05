@@ -15,9 +15,22 @@
 		4A639332193ED2A500E9E1CC /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A639331193ED2A500E9E1CC /* swift.png */; };
 		4A639334193EE20200E9E1CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A639333193EE20200E9E1CC /* QuartzCore.framework */; };
 		4A639336193EF44000E9E1CC /* weibo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4A639335193EF44000E9E1CC /* weibo.JPG */; };
+		4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E45C1940143000B766AB /* DemoTableViewController.swift */; };
+		4A67E46219404E5F00B766AB /* UITableViewSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E46119404E5F00B766AB /* UITableViewSwiftViewController.swift */; };
+		4A67E468194061E900B766AB /* JLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E464194061E900B766AB /* JLToast.swift */; };
+		4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E465194061E900B766AB /* JLToastCenter.swift */; };
+		4A67E46A194061E900B766AB /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E466194061E900B766AB /* JLToastView.swift */; };
+		4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E467194061E900B766AB /* JLTostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4A22ACE0193F119A007110A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A639307193EBF0E00E9E1CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A63930E193EBF0E00E9E1CC;
+			remoteInfo = "test-swift";
+		};
 		4A639322193EBF0E00E9E1CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4A639307193EBF0E00E9E1CC /* Project object */;
@@ -28,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A63930F193EBF0E00E9E1CC /* test-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A63930F193EBF0E00E9E1CC /* Flying-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flying-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A639313193EBF0E00E9E1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A639314193EBF0E00E9E1CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A639316193EBF0E00E9E1CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +53,12 @@
 		4A639331193ED2A500E9E1CC /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
 		4A639333193EE20200E9E1CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4A639335193EF44000E9E1CC /* weibo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weibo.JPG; sourceTree = "<group>"; };
+		4A67E45C1940143000B766AB /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
+		4A67E46119404E5F00B766AB /* UITableViewSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSwiftViewController.swift; sourceTree = "<group>"; };
+		4A67E464194061E900B766AB /* JLToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToast.swift; sourceTree = "<group>"; };
+		4A67E465194061E900B766AB /* JLToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastCenter.swift; sourceTree = "<group>"; };
+		4A67E466194061E900B766AB /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
+		4A67E467194061E900B766AB /* JLTostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLTostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +93,7 @@
 		4A639310193EBF0E00E9E1CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A63930F193EBF0E00E9E1CC /* test-swift.app */,
+				4A63930F193EBF0E00E9E1CC /* Flying-Swift.app */,
 				4A639321193EBF0E00E9E1CC /* test-swiftTests.xctest */,
 			);
 			name = Products;
@@ -83,10 +102,13 @@
 		4A639311193EBF0E00E9E1CC /* test-swift */ = {
 			isa = PBXGroup;
 			children = (
+				4A67E463194061E900B766AB /* JLToast */,
+				4A67E46019404E5F00B766AB /* UITableView-Swift */,
 				4A639335193EF44000E9E1CC /* weibo.JPG */,
 				4A639331193ED2A500E9E1CC /* swift.png */,
 				4A639314193EBF0E00E9E1CC /* AppDelegate.swift */,
 				4A639316193EBF0E00E9E1CC /* ViewController.swift */,
+				4A67E45C1940143000B766AB /* DemoTableViewController.swift */,
 				4A639318193EBF0E00E9E1CC /* Main.storyboard */,
 				4A63931B193EBF0E00E9E1CC /* Images.xcassets */,
 				4A639312193EBF0E00E9E1CC /* Supporting Files */,
@@ -119,6 +141,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4A67E46019404E5F00B766AB /* UITableView-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4A67E46119404E5F00B766AB /* UITableViewSwiftViewController.swift */,
+			);
+			path = "UITableView-Swift";
+			sourceTree = "<group>";
+		};
+		4A67E463194061E900B766AB /* JLToast */ = {
+			isa = PBXGroup;
+			children = (
+				4A67E464194061E900B766AB /* JLToast.swift */,
+				4A67E465194061E900B766AB /* JLToastCenter.swift */,
+				4A67E466194061E900B766AB /* JLToastView.swift */,
+				4A67E467194061E900B766AB /* JLTostViewController.swift */,
+			);
+			path = JLToast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,7 +177,7 @@
 			);
 			name = "test-swift";
 			productName = "test-swift";
-			productReference = 4A63930F193EBF0E00E9E1CC /* test-swift.app */;
+			productReference = 4A63930F193EBF0E00E9E1CC /* Flying-Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4A639320193EBF0E00E9E1CC /* test-swiftTests */ = {
@@ -151,6 +192,7 @@
 			);
 			dependencies = (
 				4A639323193EBF0E00E9E1CC /* PBXTargetDependency */,
+				4A22ACE1193F119A007110A8 /* PBXTargetDependency */,
 			);
 			name = "test-swiftTests";
 			productName = "test-swiftTests";
@@ -220,8 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A67E468194061E900B766AB /* JLToast.swift in Sources */,
+				4A67E46A194061E900B766AB /* JLToastView.swift in Sources */,
+				4A67E46219404E5F00B766AB /* UITableViewSwiftViewController.swift in Sources */,
+				4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */,
+				4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */,
 				4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */,
 				4A639315193EBF0E00E9E1CC /* AppDelegate.swift in Sources */,
+				4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +284,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4A22ACE1193F119A007110A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A63930E193EBF0E00E9E1CC /* test-swift */;
+			targetProxy = 4A22ACE0193F119A007110A8 /* PBXContainerItemProxy */;
+		};
 		4A639323193EBF0E00E9E1CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4A63930E193EBF0E00E9E1CC /* test-swift */;
@@ -292,6 +345,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Flying-Swift";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -327,6 +381,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Flying-Swift";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -338,8 +393,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "test-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Flying-Swift";
 			};
 			name = Debug;
 		};
@@ -349,8 +405,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "test-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Flying-Swift";
 			};
 			name = Release;
 		};
