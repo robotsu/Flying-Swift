@@ -10,10 +10,12 @@ Flying-Swift项目是一个纯Swift语言开发的Xcode6, iOS7/8项目，免费�
 
 2014.6.5 Add OPEN SOUSE DEMONSTRATION: 
 
-
 [JLToast] from SuYeol Jeon
 
 [UITableView-Swift] from YANGReal
+
+2014.6.6 Add apples UICategory and UIKit Dynamic Catagory, still working
+on it.
 
 weibo: [@suwei76][1]
 blog: [objcc.com][2]

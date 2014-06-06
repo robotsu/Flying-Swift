@@ -21,6 +21,10 @@
 		4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E465194061E900B766AB /* JLToastCenter.swift */; };
 		4A67E46A194061E900B766AB /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E466194061E900B766AB /* JLToastView.swift */; };
 		4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E467194061E900B766AB /* JLTostViewController.swift */; };
+		4ABCC03819419E610037E9F2 /* ActionSheetViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCC03719419E610037E9F2 /* ActionSheetViewControlle.swift */; };
+		4ABCC03A19419EAB0037E9F2 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCC03919419EAB0037E9F2 /* ActivityIndicatorViewController.swift */; };
+		4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7EA9819417B4900C45C18 /* GravityViewController.swift */; };
+		4AE7EA9B1941936100C45C18 /* Box1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AE7EA9A1941936100C45C18 /* Box1@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		4A67E465194061E900B766AB /* JLToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastCenter.swift; sourceTree = "<group>"; };
 		4A67E466194061E900B766AB /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
 		4A67E467194061E900B766AB /* JLTostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLTostViewController.swift; sourceTree = "<group>"; };
+		4ABCC03719419E610037E9F2 /* ActionSheetViewControlle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewControlle.swift; sourceTree = "<group>"; };
+		4ABCC03919419EAB0037E9F2 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		4AE7EA9819417B4900C45C18 /* GravityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
+		4AE7EA9A1941936100C45C18 /* Box1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box1@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,8 @@
 		4A639311193EBF0E00E9E1CC /* test-swift */ = {
 			isa = PBXGroup;
 			children = (
+				4AE7EA9C1941961100C45C18 /* UICatalog */,
+				4AE7EA9719417B0700C45C18 /* UIDynamicsCatalog */,
 				4A67E463194061E900B766AB /* JLToast */,
 				4A67E46019404E5F00B766AB /* UITableView-Swift */,
 				4A639335193EF44000E9E1CC /* weibo.JPG */,
@@ -158,6 +168,24 @@
 				4A67E467194061E900B766AB /* JLTostViewController.swift */,
 			);
 			path = JLToast;
+			sourceTree = "<group>";
+		};
+		4AE7EA9719417B0700C45C18 /* UIDynamicsCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				4AE7EA9A1941936100C45C18 /* Box1@2x.png */,
+				4AE7EA9819417B4900C45C18 /* GravityViewController.swift */,
+			);
+			path = UIDynamicsCatalog;
+			sourceTree = "<group>";
+		};
+		4AE7EA9C1941961100C45C18 /* UICatalog */ = {
+			isa = PBXGroup;
+			children = (
+				4ABCC03719419E610037E9F2 /* ActionSheetViewControlle.swift */,
+				4ABCC03919419EAB0037E9F2 /* ActivityIndicatorViewController.swift */,
+			);
+			path = UICatalog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +272,7 @@
 				4A63931A193EBF0E00E9E1CC /* Main.storyboard in Resources */,
 				4A639332193ED2A500E9E1CC /* swift.png in Resources */,
 				4A639336193EF44000E9E1CC /* weibo.JPG in Resources */,
+				4AE7EA9B1941936100C45C18 /* Box1@2x.png in Resources */,
 				4A63931C193EBF0E00E9E1CC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,13 +292,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A67E468194061E900B766AB /* JLToast.swift in Sources */,
+				4ABCC03819419E610037E9F2 /* ActionSheetViewControlle.swift in Sources */,
 				4A67E46A194061E900B766AB /* JLToastView.swift in Sources */,
+				4ABCC03A19419EAB0037E9F2 /* ActivityIndicatorViewController.swift in Sources */,
 				4A67E46219404E5F00B766AB /* UITableViewSwiftViewController.swift in Sources */,
 				4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */,
 				4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */,
 				4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */,
 				4A639315193EBF0E00E9E1CC /* AppDelegate.swift in Sources */,
 				4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */,
+				4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
