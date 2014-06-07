@@ -14,8 +14,9 @@ Flying-Swift项目是一个纯Swift语言开发的Xcode6, iOS7/8项目，免费�
 
 [UITableView-Swift] from YANGReal
 
-2014.6.6 Add apples UICategory and UIKit Dynamic Catagory, still working
-on it.
+2014.6.6 Add apples UICategory and UIKit Dynamic Catagory, still working on it.
+
+2014.6.7 Add apples UIKit Dynamic Catagory: CollisionGravityViewController.
 
 weibo: [@suwei76][1]
 blog: [objcc.com][2]

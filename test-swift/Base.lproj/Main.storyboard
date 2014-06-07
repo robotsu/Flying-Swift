@@ -239,6 +239,26 @@
                                             <segue destination="l5x-de-Bkj" kind="show" id="2Tx-5Z-gAe"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="F1B-gN-EBs" style="IBUITableViewCellStyleDefault" id="WfA-kA-g6b">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WfA-kA-g6b" id="NUc-JG-1Jy">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Collision + Gravity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F1B-gN-EBs">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Hud-z9-N29" kind="show" id="Bcz-hi-Egn"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -391,6 +411,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sIS-AF-iKB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hz2-dr-wH4">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am still working on it" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCC-vz-det">
@@ -467,14 +488,14 @@
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="B5i-tR-aSc"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="widthClass=compact">
                                                 <mask key="constraints">
                                                     <include reference="Rs7-nM-BDg"/>
                                                     <include reference="Xcf-Th-vFK"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="B5i-tR-aSc"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -573,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImD-IW-FWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912.5" y="417"/>
+            <point key="canvasLocation" x="1938" y="86"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="xLm-fu-06N">
@@ -655,6 +676,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oa8-sg-7hR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-237" y="102"/>
+        </scene>
+        <!--Collision Gravity View Controller-->
+        <scene sceneID="tLF-dl-yzN">
+            <objects>
+                <viewController id="Hud-z9-N29" customClass="CollisionGravityViewController" customModule="Flying_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fpY-P9-xSl"/>
+                        <viewControllerLayoutGuide type="bottom" id="KgZ-6e-eHU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VJE-Qt-D80">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box1.png" translatesAutoresizingMaskIntoConstraints="NO" id="WAj-be-zZb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="110" y="82" width="100" height="100"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WAj-be-zZb"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="WAj-be-zZb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="box1" destination="WAj-be-zZb" id="ggW-xq-sxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A84-Tg-Eqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452.5" y="86"/>
         </scene>
     </scenes>
     <resources>
