@@ -18,6 +18,17 @@ Flying-Swift项目是一个纯Swift语言开发的Xcode6, iOS7/8项目，免费�
 
 2014.6.7 Add apples UIKit Dynamic Catagory: CollisionGravityViewController.
 
+2014.6.8 Maybe I found a xcode6 beta(ios8 beta)'s bug when I add a control into a Table View's Static Cell Content View, the steps are: 
+  1.New a project (master detail template), 
+  2.Open storyboard, change Layout: wCompact hAny, 
+  3.Change Table View with Static Cells, 
+  4.Add any control such as an Activity Indicator in to the Table View
+  5.Cell's Content View, and add New Alignment Constrains: Horizontal Center in Container and Vertical Center in Container,
+  6.Run the App: The bug is you will not see the Activity Indicator or any control you just added just now.
+
+  However if you select wAny hAny layout first, the control (Activity Indicator, any) can
+be shown as we expect.
+
 weibo: [@suwei76][1]
 blog: [objcc.com][2]
 
