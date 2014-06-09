@@ -35,8 +35,7 @@ class ActivityIndicatorViewController: UITableViewController {
         
         self.configureGrayActivityIndicatorView();
         self.configureTintedActivityIndicatorView();
-        
-        JLToast.makeText("I think the sdk or xcode6 beta has bugs, it can not show the indicators").show()
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -26,6 +26,8 @@
 		4ACBA8101943172300058977 /* CollisionGravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBA80F1943172300058977 /* CollisionGravityViewController.swift */; };
 		4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7EA9819417B4900C45C18 /* GravityViewController.swift */; };
 		4AE7EA9B1941936100C45C18 /* Box1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AE7EA9A1941936100C45C18 /* Box1@2x.png */; };
+		4AEBF71E19441099000E8180 /* AttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBF71D19441099000E8180 /* AttachmentViewController.swift */; };
+		4AEBF72219444B59000E8180 /* UIDCDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBF72119444B59000E8180 /* UIDCDecorationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		4ACBA80F1943172300058977 /* CollisionGravityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionGravityViewController.swift; sourceTree = "<group>"; };
 		4AE7EA9819417B4900C45C18 /* GravityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
 		4AE7EA9A1941936100C45C18 /* Box1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box1@2x.png"; sourceTree = "<group>"; };
+		4AEBF71D19441099000E8180 /* AttachmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentViewController.swift; sourceTree = "<group>"; };
+		4AEBF72119444B59000E8180 /* UIDCDecorationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDCDecorationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 				4AE7EA9A1941936100C45C18 /* Box1@2x.png */,
 				4AE7EA9819417B4900C45C18 /* GravityViewController.swift */,
 				4ACBA80F1943172300058977 /* CollisionGravityViewController.swift */,
+				4AEBF71D19441099000E8180 /* AttachmentViewController.swift */,
+				4AEBF72119444B59000E8180 /* UIDCDecorationView.swift */,
 			);
 			path = UIDynamicsCatalog;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 				4ACBA8101943172300058977 /* CollisionGravityViewController.swift in Sources */,
 				4A67E468194061E900B766AB /* JLToast.swift in Sources */,
 				4ABCC03819419E610037E9F2 /* ActionSheetViewControlle.swift in Sources */,
+				4AEBF72219444B59000E8180 /* UIDCDecorationView.swift in Sources */,
 				4A67E46A194061E900B766AB /* JLToastView.swift in Sources */,
 				4ABCC03A19419EAB0037E9F2 /* ActivityIndicatorViewController.swift in Sources */,
 				4A67E46219404E5F00B766AB /* UITableViewSwiftViewController.swift in Sources */,
@@ -305,6 +312,7 @@
 				4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */,
 				4A639315193EBF0E00E9E1CC /* AppDelegate.swift in Sources */,
 				4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */,
+				4AEBF71E19441099000E8180 /* AttachmentViewController.swift in Sources */,
 				4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
