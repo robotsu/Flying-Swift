@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A5192D91946F1FC00FCC66C /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192D81946F1FC00FCC66C /* SnapViewController.swift */; };
+		4A5192DB1946FCBE00FCC66C /* ContinuousPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */; };
+		4A5192DD1947094B00FCC66C /* InstantaneousPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */; };
+		4A5192DF194711C400FCC66C /* ItemPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DE194711C400FCC66C /* ItemPropertiesViewController.swift */; };
 		4A639315193EBF0E00E9E1CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A639314193EBF0E00E9E1CC /* AppDelegate.swift */; };
 		4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A639316193EBF0E00E9E1CC /* ViewController.swift */; };
 		4A63931A193EBF0E00E9E1CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A639318193EBF0E00E9E1CC /* Main.storyboard */; };
@@ -48,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A5192D81946F1FC00FCC66C /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
+		4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinuousPushViewController.swift; sourceTree = "<group>"; };
+		4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantaneousPushViewController.swift; sourceTree = "<group>"; };
+		4A5192DE194711C400FCC66C /* ItemPropertiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemPropertiesViewController.swift; sourceTree = "<group>"; };
 		4A63930F193EBF0E00E9E1CC /* Flying-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flying-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A639313193EBF0E00E9E1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A639314193EBF0E00E9E1CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +191,10 @@
 				4AE7EA9819417B4900C45C18 /* GravityViewController.swift */,
 				4ACBA80F1943172300058977 /* CollisionGravityViewController.swift */,
 				4AEBF71D19441099000E8180 /* AttachmentViewController.swift */,
+				4A5192D81946F1FC00FCC66C /* SnapViewController.swift */,
+				4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */,
+				4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */,
+				4A5192DE194711C400FCC66C /* ItemPropertiesViewController.swift */,
 				4AEBF72119444B59000E8180 /* UIDCDecorationView.swift */,
 			);
 			path = UIDynamicsCatalog;
@@ -300,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5192D91946F1FC00FCC66C /* SnapViewController.swift in Sources */,
 				4ACBA8101943172300058977 /* CollisionGravityViewController.swift in Sources */,
 				4A67E468194061E900B766AB /* JLToast.swift in Sources */,
 				4ABCC03819419E610037E9F2 /* ActionSheetViewControlle.swift in Sources */,
@@ -309,11 +322,14 @@
 				4A67E46219404E5F00B766AB /* UITableViewSwiftViewController.swift in Sources */,
 				4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */,
 				4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */,
+				4A5192DF194711C400FCC66C /* ItemPropertiesViewController.swift in Sources */,
 				4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */,
 				4A639315193EBF0E00E9E1CC /* AppDelegate.swift in Sources */,
 				4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */,
 				4AEBF71E19441099000E8180 /* AttachmentViewController.swift in Sources */,
 				4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */,
+				4A5192DD1947094B00FCC66C /* InstantaneousPushViewController.swift in Sources */,
+				4A5192DB1946FCBE00FCC66C /* ContinuousPushViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

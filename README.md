@@ -10,6 +10,8 @@ Flying-Swift项目是一个纯Swift语言开发的Xcode6, iOS7/8项目，免费�
 
 History:
 
+2014.6.10 Add ItemPropertiesViewController, InstantaneousPushViewController, ContinuousPushViewController etc.
+
 2014.6.9 Change layout compatible with "wAny hAny" class; Since apple has distrubuted "Creating and Customizing UIKit Controls in Swift" samples recently, so I do not need to translate more, you can find the sample on apple's developer site, Thanks.
 
 2014.6.8 Maybe I found a xcode6 beta(ios8 beta)'s bug when I add a control into a Table View's Static Cell Content View, the steps are: 

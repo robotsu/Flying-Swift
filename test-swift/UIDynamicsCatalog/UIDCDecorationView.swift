@@ -19,6 +19,7 @@ class UIDCDecorationView: UIView {
     //! for a dash.
     var attachmentDecorationLayers:NSMutableArray?
     
+    @IBOutlet var centerPointView : UIImageView
     var arrowView:UIImageView?
     
     init(coder aDecoder: NSCoder!)
@@ -42,7 +43,39 @@ class UIDCDecorationView: UIView {
     }
     */
     
-    
+    //| ----------------------------------------------------------------------------
+    //! Draws an arrow with a given @a length anchored at the center of the receiver,
+    //! that points in the direction given by @a angle.
+    //
+    func drawMagnitudeVector(length:CGFloat, angle:CGFloat, color arrowColor:UIColor, forLimitedTime temporary:Bool)
+    {
+        if (!self.arrowView)
+        // First time initialization.
+        {
+            var arrowImage:UIImage = UIImage(named:"Arrow").imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            
+            var arrowImageView:UIImageView = UIImageView(image:arrowImage);
+            arrowImageView.bounds = CGRectMake(0, 0, arrowImage.size.width, arrowImage.size.height);
+            arrowImageView.contentMode = UIViewContentMode.Right;
+            arrowImageView.clipsToBounds = true;
+            arrowImageView.layer.anchorPoint = CGPointMake(0.0, 0.5);
+            
+            self.addSubview(arrowImageView);
+            self.sendSubviewToBack(arrowImageView);
+            self.arrowView = arrowImageView;
+        }
+        
+        self.arrowView!.bounds = CGRectMake(0, 0, length, self.arrowView!.bounds.size.height);
+        self.arrowView!.transform = CGAffineTransformMakeRotation(angle);
+        self.arrowView!.tintColor = arrowColor;
+        self.arrowView!.alpha = 1;
+        
+        if (temporary){
+            UIView.animateWithDuration(1.0, animations:{
+                self.arrowView!.alpha = 0;
+            });
+        }
+    }
     
     //| ----------------------------------------------------------------------------
     //! Draws a dashed line between @a attachmentPointView and @a attachedView
@@ -94,10 +127,13 @@ class UIDCDecorationView: UIView {
     {
         super.layoutSubviews();
         
-        //self.arrowView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
+        if(self.arrowView){
+            self.arrowView!.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
+        }
         
-        //if (self.centerPointView)
-        //    self.centerPointView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+        if (self.centerPointView){
+            self.centerPointView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
+        }
         
         if (self.attachmentDecorationLayers)
         {
