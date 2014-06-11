@@ -703,6 +703,26 @@
                                             <segue destination="gAK-Rr-SEX" kind="show" id="Rgc-zv-onq"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Mcn-kq-JEo" style="IBUITableViewCellStyleDefault" id="5d9-aa-5PK">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5d9-aa-5PK" id="wD1-hu-Hwo">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Custom Dynamic Item" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mcn-kq-JEo">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="PG0-hX-kvm" kind="show" id="z2f-JN-2p1"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1390,11 +1410,49 @@
             </objects>
             <point key="canvasLocation" x="3284" y="-492"/>
         </scene>
+        <!--Custom Dynamic View Controller - Custom Dynamic Item-->
+        <scene sceneID="sbu-Jw-0dc">
+            <objects>
+                <viewController id="PG0-hX-kvm" customClass="CustomDynamicViewController" customModule="Flying_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xur-YA-9kv"/>
+                        <viewControllerLayoutGuide type="bottom" id="zhU-qe-zep"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IMt-cc-8bZ" userLabel="View" customClass="UIDCDecorationView" customModule="Flying_Swift" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-9L-XJZ">
+                                <rect key="frame" x="165" y="256" width="150" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="Button_Mask"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="PG0-hX-kvm" eventType="touchUpInside" id="OAN-fz-ZQs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zhU-qe-zep" firstAttribute="top" secondItem="hHt-9L-XJZ" secondAttribute="bottom" constant="178" id="8rF-lb-qxP"/>
+                            <constraint firstItem="hHt-9L-XJZ" firstAttribute="centerX" secondItem="IMt-cc-8bZ" secondAttribute="centerX" id="qce-Kn-cJm"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom Dynamic Item" id="qVF-vc-Fht"/>
+                    <connections>
+                        <outlet property="button1" destination="hHt-9L-XJZ" id="zyp-8m-RIZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbj-TK-8Kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3800" y="-492"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AttachmentPoint_Mask" width="12" height="12"/>
         <image name="Box1" width="100" height="100"/>
         <image name="Box2" width="100" height="100"/>
+        <image name="Button_Mask" width="150" height="46"/>
         <image name="Floor" width="568" height="4"/>
         <image name="Origin" width="10" height="10"/>
         <image name="swift.png" width="139" height="135"/>
