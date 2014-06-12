@@ -10,6 +10,8 @@ Flying-Swift项目是一个纯Swift语言开发的Xcode6, iOS7/8项目，免费�
 
 History:
 
+2014.6.11 Add AttachmentViewController but maybe found an ios8 beta's bug, read the source please.
+
 2014.6.11 Add CustomDynamicItemViewController etc.
 
 2014.6.10 Add ItemPropertiesViewController, InstantaneousPushViewController, ContinuousPushViewController etc.

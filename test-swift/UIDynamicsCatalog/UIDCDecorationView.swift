@@ -12,7 +12,7 @@ import QuartzCore
 
 class UIDCDecorationView: UIView {
     
-    var attachmentPointView:UIView?
+    var attachmentPointView:UIImageView?
     var attachedView:UIView?
     var attachmentOffset:CGPoint?
     //! Array of CALayer objects, each with the contents of an image
@@ -81,7 +81,7 @@ class UIDCDecorationView: UIView {
     //! Draws a dashed line between @a attachmentPointView and @a attachedView
     //! that is updated as either view moves.
     //
-    func trackAndDrawAttachmentFromView(attachmentPointView:UIView, toView attachedView:UIView, withAttachmentOffset attachmentOffset:CGPoint)
+    func trackAndDrawAttachmentFromView(attachmentPointView:UIImageView, toView attachedView:UIView, withAttachmentOffset attachmentOffset:CGPoint)
     {
         if (!self.attachmentDecorationLayers)
         // First time initialization.
@@ -106,9 +106,10 @@ class UIDCDecorationView: UIView {
         // during each step in the simulation in which the tracked item is not at
         // rest.  You should therefore strive to make your callback code as
         // efficient as possible.
+
         
-        //self.attachmentPointView!.removeObserver(self, forKeyPath:"center", context:nil)
-        //self.attachedView!.removeObserver(self, forKeyPath:"center", context:nil)
+        self.attachmentPointView?.removeObserver(self, forKeyPath:"center")
+        self.attachedView?.removeObserver(self, forKeyPath:"center")
         
         self.attachmentPointView = attachmentPointView
         self.attachedView = attachedView
@@ -142,6 +143,12 @@ class UIDCDecorationView: UIView {
             // in the position of either.
         
             let MaxDashes = self.attachmentDecorationLayers!.count;
+            
+            print("11111->")
+            println(self.attachmentPointView)
+            print("22222->")
+            println(self.attachedView)
+            println("\n\n")
         
             var attachmentPointViewCenter:CGPoint = CGPointMake(self.attachmentPointView!.bounds.size.width/2, self.attachmentPointView!.bounds.size.height/2)
             attachmentPointViewCenter = self.attachmentPointView!.convertPoint(attachmentPointViewCenter, toView:self)
@@ -184,8 +191,8 @@ class UIDCDecorationView: UIView {
         
             // Hide the excess dashes.
             while (requiredDashes < MaxDashes){
-                requiredDashes++
                 (self.attachmentDecorationLayers![requiredDashes] as CALayer).hidden=true
+                requiredDashes++
             }
             // Disable any animations.  The changes must take full effect immediately.
             CATransaction.begin();
@@ -219,7 +226,7 @@ class UIDCDecorationView: UIView {
 
     override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: NSDictionary!, context: CMutableVoidPointer)
     {
-        if (object as NSObject == self.attachmentPointView! || object as NSObject == self.attachedView!)
+        if (object as UIView == self.attachmentPointView! || object as UIView == self.attachedView!)
         {
             self.setNeedsLayout()
         }

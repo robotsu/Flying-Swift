@@ -13,22 +13,14 @@ class AttachmentViewController: UIViewController {
     @IBOutlet var square1AttachmentView : UIImageView
     //! The view that the user drags to move square1.
     @IBOutlet var attachmentView : UIImageView
-    @IBOutlet var square1 : UIImageView
+    @IBOutlet var square1 : UIView
     var animator : UIDynamicAnimator?
     var attachmentBehavior : UIAttachmentBehavior?
-    
-    //| ----------------------------------------------------------------------------
-    override func viewDidAppear(animated:Bool)
-    {
-        super.viewDidAppear(animated);
-    }
-    
     
     init(coder aDecoder: NSCoder!)
     {
         super.init(coder: aDecoder)
     }
-    
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -53,6 +45,7 @@ class AttachmentViewController: UIViewController {
         // By default, an attachment behavior uses the center of a view. By using a
         // small offset, we get a more interesting effect which will cause the view
         // to have rotation movement when dragging the attachment.
+        
         let attachmentBehavior:UIAttachmentBehavior = UIAttachmentBehavior(item:self.square1, offsetFromCenter:attachmentPoint, attachedToAnchor:squareCenterPoint)
         
         animator.addBehavior(attachmentBehavior)
@@ -68,10 +61,12 @@ class AttachmentViewController: UIViewController {
         self.square1AttachmentView.image = self.square1AttachmentView.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         // Visually show the connection between the attachment points.
-        //(self.view as UIDCDecorationView).trackAndDrawAttachmentFromView(self.attachmentView, toView:self.square1, withAttachmentOffset:CGPointMake(-25.0, -25.0));
+        (self.view as UIDCDecorationView).trackAndDrawAttachmentFromView(self.attachmentView, toView:self.square1, withAttachmentOffset:CGPointMake(-25.0, -25.0));
         
+        self.animator = animator;
         
-        JLToast.makeText("sorry, not finished yet").show()
+        JLToast.makeText("Maybe ios8 beta's bug, not working properly").show()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,9 +84,16 @@ class AttachmentViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func handleAttachmentGesture(gesture : UIPanGestureRecognizer) {
-        self.attachmentBehavior!.anchorPoint = gesture.locationInView(self.view)
+
+    @IBAction func handleAttachmentGesture(sender : UIPanGestureRecognizer) {
+        self.attachmentBehavior!.anchorPoint = sender.locationInView(self.view)
         self.attachmentView.center = self.attachmentBehavior!.anchorPoint
+        
+        print("aaaa->")
+        println(self.attachmentView)
+        print("bbbb->")
+        println(self.square1)
+        
     }
 
 }

@@ -551,7 +551,7 @@
             </objects>
             <point key="canvasLocation" x="723" y="9"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - UIKit Dynamics Catalog-->
         <scene sceneID="4eR-Hm-wcg">
             <objects>
                 <tableViewController id="GpH-WH-B1p" sceneMemberID="viewController">
@@ -620,7 +620,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="AF8-Gi-3S4" kind="show" id="g5u-70-jEc"/>
+                                            <segue destination="o63-7U-xmL" kind="show" id="hnv-Rt-fF7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cmv-JT-5W4" style="IBUITableViewCellStyleDefault" id="7Os-eC-daE">
@@ -731,6 +731,7 @@
                             <outlet property="delegate" destination="GpH-WH-B1p" id="mdj-Y1-Oq5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="UIKit Dynamics Catalog" id="Ogg-JZ-4df"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="533-bJ-FZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -900,7 +901,7 @@
             </objects>
             <point key="canvasLocation" x="2386" y="912"/>
         </scene>
-        <!--Gravity View Controller-->
+        <!--Gravity View Controller - Gravity-->
         <scene sceneID="Urt-xJ-aIk">
             <objects>
                 <viewController id="l5x-de-Bkj" customClass="GravityViewController" customModule="Flying_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -923,6 +924,7 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Gravity" id="Jrd-Uf-asw"/>
                     <connections>
                         <outlet property="box1" destination="mdJ-bH-iWN" id="el0-sB-gcG"/>
                     </connections>
@@ -931,7 +933,7 @@
             </objects>
             <point key="canvasLocation" x="1310" y="63"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Apple Sample Trans-->
         <scene sceneID="xLm-fu-06N">
             <objects>
                 <tableViewController id="ihO-cD-AsS" sceneMemberID="viewController">
@@ -991,6 +993,7 @@
                             <outlet property="delegate" destination="ihO-cD-AsS" id="iQx-eD-jJJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Apple Sample Trans" id="Ee0-0A-tCX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTm-y0-Q8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1012,7 +1015,7 @@
             </objects>
             <point key="canvasLocation" x="-589.5" y="99"/>
         </scene>
-        <!--Collision Gravity View Controller-->
+        <!--Collision Gravity View Controller - Collision + Gravity-->
         <scene sceneID="tLF-dl-yzN">
             <objects>
                 <viewController id="Hud-z9-N29" customClass="CollisionGravityViewController" customModule="Flying_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -1035,6 +1038,7 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Collision + Gravity" id="Enh-9X-lPg"/>
                     <connections>
                         <outlet property="box1" destination="mtt-uZ-lNl" id="fI8-HP-Y7S"/>
                     </connections>
@@ -1044,69 +1048,61 @@
             <point key="canvasLocation" x="1861" y="-44"/>
         </scene>
         <!--Attachment View Controller - Attachments + Collision-->
-        <scene sceneID="QQu-9k-jxc">
+        <scene sceneID="Qdk-Zi-pab">
             <objects>
-                <viewController id="AF8-Gi-3S4" customClass="AttachmentViewController" customModule="Flying_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="o63-7U-xmL" customClass="AttachmentViewController" customModule="Flying_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LCa-dP-HVu"/>
-                        <viewControllerLayoutGuide type="bottom" id="aBX-v2-OZ2"/>
+                        <viewControllerLayoutGuide type="top" id="Kj4-Go-yXD"/>
+                        <viewControllerLayoutGuide type="bottom" id="XRR-Nl-AZo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oOE-IA-amy" userLabel="View" customClass="UIDCDecorationView" customModule="Flying_Swift" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="Ox0-vp-o6A" customClass="UIDCDecorationView" customModule="Flying_Swift" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Chp-RT-sgQ">
-                                <rect key="frame" x="110" y="135" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AttachmentPoint_Mask" translatesAutoresizingMaskIntoConstraints="NO" id="Fni-K2-h6x">
+                                <rect key="frame" x="87" y="121" width="14" height="14"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikk-BW-mTd">
+                                <rect key="frame" x="190" y="147" width="100" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AttachmentPoint_Mask" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-fU-U7g">
-                                        <rect key="frame" x="44" y="44" width="14" height="14"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box1" translatesAutoresizingMaskIntoConstraints="NO" id="Se4-gi-7l8">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box1" translatesAutoresizingMaskIntoConstraints="NO" id="9L4-Ie-Y2d">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="102"/>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AttachmentPoint_Mask" translatesAutoresizingMaskIntoConstraints="NO" id="CoB-hK-wrh">
+                                        <rect key="frame" x="43" y="43" width="14" height="14"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="110" y="143" width="100" height="104"/>
+                                </variation>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-01-mj7">
-                                <rect key="frame" x="20" y="504" width="280" height="44"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Drag anywhere to move the square.">
-                                        <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <font key="NSFont" size="15" name="Chalkduster"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AttachmentPoint_Mask" translatesAutoresizingMaskIntoConstraints="NO" id="u1O-7G-Sui">
-                                <rect key="frame" x="12" y="76" width="14" height="14"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="eHN-tq-Wrw" appends="YES" id="jGs-2h-Ec0"/>
-                            <outletCollection property="gestureRecognizers" destination="eHN-tq-Wrw" appends="YES" id="6to-UY-U5k"/>
-                            <outletCollection property="gestureRecognizers" destination="eHN-tq-Wrw" appends="YES" id="hxv-k6-XOd"/>
+                            <outletCollection property="gestureRecognizers" destination="zFa-g0-pe3" appends="YES" id="XQM-SD-Tty"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Attachments + Collision" id="1Zi-YW-Fqj"/>
+                    <navigationItem key="navigationItem" title="Attachments + Collision" id="C7R-Ve-Oeo"/>
                     <connections>
-                        <outlet property="attachmentView" destination="u1O-7G-Sui" id="Dky-Qu-eLt"/>
-                        <outlet property="square1" destination="Se4-gi-7l8" id="Wi6-wS-mKZ"/>
-                        <outlet property="square1AttachmentView" destination="8gB-fU-U7g" id="Sb8-fi-wIz"/>
+                        <outlet property="attachmentView" destination="Fni-K2-h6x" id="SGe-d5-J9s"/>
+                        <outlet property="square1" destination="ikk-BW-mTd" id="gL3-eg-TEe"/>
+                        <outlet property="square1AttachmentView" destination="CoB-hK-wrh" id="AWK-PP-bvN"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oCB-09-DN8" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="eHN-tq-Wrw">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqi-FH-xk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="zFa-g0-pe3">
                     <connections>
-                        <action selector="handleAttachmentGesture:" destination="AF8-Gi-3S4" id="QSy-cT-uKY"/>
+                        <action selector="handleAttachmentGesture:" destination="o63-7U-xmL" id="a1O-7g-bFj"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2398.5" y="99"/>
+            <point key="canvasLocation" x="2373" y="63"/>
         </scene>
         <!--Activity Indicator View Controller - Activity Indicators-->
         <scene sceneID="PgJ-LI-Xgy">
@@ -1127,13 +1123,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L2R-o7-vCn">
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L2R-o7-vCn">
                                                     <rect key="frame" x="230" y="13" width="20" height="20"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="L2R-o7-vCn" secondAttribute="centerY" id="2fs-wG-DIC"/>
-                                                <constraint firstAttribute="centerX" secondItem="L2R-o7-vCn" secondAttribute="centerX" id="nRG-b8-5Cw"/>
+                                                <constraint firstItem="L2R-o7-vCn" firstAttribute="centerX" secondItem="Jh8-LY-vfH" secondAttribute="centerX" id="BrD-ah-Rsw"/>
+                                                <constraint firstItem="L2R-o7-vCn" firstAttribute="top" secondItem="Jh8-LY-vfH" secondAttribute="top" constant="13" id="rnE-yE-WUA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1148,13 +1144,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="k2Q-Bb-3CV">
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="k2Q-Bb-3CV">
                                                     <rect key="frame" x="230" y="13" width="20" height="20"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="k2Q-Bb-3CV" secondAttribute="centerY" id="2xq-OG-DHI"/>
-                                                <constraint firstAttribute="centerX" secondItem="k2Q-Bb-3CV" secondAttribute="centerX" id="DUQ-Hn-M11"/>
+                                                <constraint firstItem="k2Q-Bb-3CV" firstAttribute="top" secondItem="CiB-T4-dta" secondAttribute="top" constant="13" id="7Mu-Ii-PbQ"/>
+                                                <constraint firstItem="k2Q-Bb-3CV" firstAttribute="centerX" secondItem="CiB-T4-dta" secondAttribute="centerX" id="S7O-Zh-vCn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1359,38 +1355,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floor" translatesAutoresizingMaskIntoConstraints="NO" id="gru-kj-DoU">
-                                <rect key="frame" x="0.0" y="564" width="320" height="4"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Box1" translatesAutoresizingMaskIntoConstraints="NO" id="i3F-Rb-OO5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box1" translatesAutoresizingMaskIntoConstraints="NO" id="i3F-Rb-OO5">
                                 <rect key="frame" x="120" y="113" width="100" height="100"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Box2" translatesAutoresizingMaskIntoConstraints="NO" id="0ho-ff-ibs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box2" translatesAutoresizingMaskIntoConstraints="NO" id="0ho-ff-ibs">
                                 <rect key="frame" x="260" y="113" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Floor" translatesAutoresizingMaskIntoConstraints="NO" id="gru-kj-DoU">
+                                <rect key="frame" x="0.0" y="477" width="480" height="3"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0ho-ff-ibs" firstAttribute="leading" secondItem="i3F-Rb-OO5" secondAttribute="trailing" constant="40" id="5I6-Er-pFF"/>
-                            <constraint firstItem="i3F-Rb-OO5" firstAttribute="top" secondItem="hRb-ya-wsA" secondAttribute="bottom" constant="89" id="Dhr-g7-5Wm"/>
-                            <constraint firstItem="0ho-ff-ibs" firstAttribute="top" secondItem="i3F-Rb-OO5" secondAttribute="top" id="f25-cp-UMj"/>
-                            <constraint firstItem="i3F-Rb-OO5" firstAttribute="leading" secondItem="vSY-he-N6M" secondAttribute="leading" constant="40" id="ktO-Ak-geP"/>
+                            <constraint firstItem="i3F-Rb-OO5" firstAttribute="leading" secondItem="vSY-he-N6M" secondAttribute="leading" constant="40" id="B3U-it-Bhn"/>
+                            <constraint firstItem="i3F-Rb-OO5" firstAttribute="top" secondItem="0ho-ff-ibs" secondAttribute="top" id="Bhe-2o-2WA"/>
+                            <constraint firstItem="i3F-Rb-OO5" firstAttribute="leading" secondItem="vSY-he-N6M" secondAttribute="leading" constant="120" id="QHD-eB-zoZ"/>
+                            <constraint firstItem="i3F-Rb-OO5" firstAttribute="top" secondItem="hRb-ya-wsA" secondAttribute="bottom" constant="49" id="VH6-Zh-vNK"/>
+                            <constraint firstItem="0ho-ff-ibs" firstAttribute="leading" secondItem="i3F-Rb-OO5" secondAttribute="trailing" constant="40" id="bj3-HE-iGw"/>
+                            <constraint firstItem="i3F-Rb-OO5" firstAttribute="top" secondItem="hRb-ya-wsA" secondAttribute="bottom" constant="49" id="f4f-1z-rty"/>
+                            <constraint firstItem="0ho-ff-ibs" firstAttribute="leading" secondItem="i3F-Rb-OO5" secondAttribute="trailing" constant="40" id="g96-se-0K9"/>
+                            <constraint firstItem="i3F-Rb-OO5" firstAttribute="top" secondItem="0ho-ff-ibs" secondAttribute="top" id="u7V-UQ-9An"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Dhr-g7-5Wm"/>
-                                <exclude reference="ktO-Ak-geP"/>
-                                <exclude reference="5I6-Er-pFF"/>
-                                <exclude reference="f25-cp-UMj"/>
+                                <exclude reference="B3U-it-Bhn"/>
+                                <exclude reference="Bhe-2o-2WA"/>
+                                <exclude reference="VH6-Zh-vNK"/>
+                                <exclude reference="g96-se-0K9"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <include reference="Dhr-g7-5Wm"/>
-                                <include reference="ktO-Ak-geP"/>
-                                <include reference="5I6-Er-pFF"/>
-                                <include reference="f25-cp-UMj"/>
+                                <include reference="B3U-it-Bhn"/>
+                                <include reference="Bhe-2o-2WA"/>
+                                <exclude reference="QHD-eB-zoZ"/>
+                                <include reference="VH6-Zh-vNK"/>
+                                <exclude reference="f4f-1z-rty"/>
+                                <exclude reference="u7V-UQ-9An"/>
+                                <exclude reference="bj3-HE-iGw"/>
+                                <include reference="g96-se-0K9"/>
                             </mask>
                         </variation>
                     </view>
