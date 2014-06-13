@@ -608,7 +608,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="302-xz-1QL" id="jrR-2l-ypo">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Attachment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Tl-sp-lgt">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Attachment + Collision" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Tl-sp-lgt">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -643,12 +643,32 @@
                                             <segue destination="RoQ-go-T8B" kind="show" id="8PF-Ea-HRF"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Aov-k2-TTo" style="IBUITableViewCellStyleDefault" id="ZgV-fc-JyC">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZgV-fc-JyC" id="z3I-Cq-SCC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Instantaneous Push + Collision" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aov-k2-TTo">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qgm-ma-1l5" kind="show" id="SC3-65-Qli"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Vjm-nh-Ikt" style="IBUITableViewCellStyleDefault" id="mrH-At-1rn">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mrH-At-1rn" id="3mG-7m-160">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Continuous Push" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vjm-nh-Ikt">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Continuous Push + Collision" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vjm-nh-Ikt">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -663,12 +683,12 @@
                                             <segue destination="aGj-uz-WJ9" kind="show" id="kzv-1q-U6m"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Aov-k2-TTo" style="IBUITableViewCellStyleDefault" id="ZgV-fc-JyC">
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="utO-X4-gFE" style="IBUITableViewCellStyleDefault" id="6uA-n4-hTE">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZgV-fc-JyC" id="z3I-Cq-SCC">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6uA-n4-hTE" id="Uzx-2L-Bhe">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Instantaneous Push" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aov-k2-TTo">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Pendulum (Composite Behavior)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="utO-X4-gFE">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -680,7 +700,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="qgm-ma-1l5" kind="show" id="SC3-65-Qli"/>
+                                            <segue destination="dha-v4-H1K" kind="show" id="ScQ-Gu-Ryu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mRa-eL-gZP" style="IBUITableViewCellStyleDefault" id="SA4-a9-cWD">
@@ -931,7 +951,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImD-IW-FWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="63"/>
+            <point key="canvasLocation" x="1316" y="-152"/>
         </scene>
         <!--Table View Controller - Apple Sample Trans-->
         <scene sceneID="xLm-fu-06N">
@@ -1045,7 +1065,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A84-Tg-Eqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="-44"/>
+            <point key="canvasLocation" x="1861" y="-152"/>
         </scene>
         <!--Attachment View Controller - Attachments + Collision-->
         <scene sceneID="Qdk-Zi-pab">
@@ -1223,7 +1243,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2901" y="99"/>
+            <point key="canvasLocation" x="2893" y="63"/>
         </scene>
         <!--Continuous Push View Controller - Continuous Push + Collision-->
         <scene sceneID="VaP-Iv-WYy">
@@ -1450,6 +1470,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbj-TK-8Kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3800" y="-492"/>
+        </scene>
+        <!--Composite Behavior View Controller - Pendulum(Composite Behavior)-->
+        <scene sceneID="qBI-4w-Jn2">
+            <objects>
+                <viewController id="dha-v4-H1K" customClass="CompositeBehaviorViewController" customModule="Flying_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QQp-Pg-1t5"/>
+                        <viewControllerLayoutGuide type="bottom" id="6oH-mZ-HHq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V2S-C5-OW3" customClass="UIDCDecorationView" customModule="Flying_Swift" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="JMf-FK-IDK" appends="YES" id="5b5-gc-gFC"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pendulum(Composite Behavior)" id="GMI-22-nBr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bl-2S-fhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="JMf-FK-IDK">
+                    <connections>
+                        <action selector="dragWeight:" destination="dha-v4-H1K" id="3U1-gH-KUC"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3409" y="58"/>
         </scene>
     </scenes>
     <resources>

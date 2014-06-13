@@ -13,6 +13,8 @@
 		4A5192DB1946FCBE00FCC66C /* ContinuousPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */; };
 		4A5192DD1947094B00FCC66C /* InstantaneousPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */; };
 		4A5192DF194711C400FCC66C /* ItemPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DE194711C400FCC66C /* ItemPropertiesViewController.swift */; };
+		4A5E830F194AE5A600E53043 /* CompositeBehaviorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E830E194AE5A600E53043 /* CompositeBehaviorViewController.swift */; };
+		4A5E8311194AEB3300E53043 /* UIDCPendulumBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E8310194AEB3300E53043 /* UIDCPendulumBehavior.swift */; };
 		4A639315193EBF0E00E9E1CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A639314193EBF0E00E9E1CC /* AppDelegate.swift */; };
 		4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A639316193EBF0E00E9E1CC /* ViewController.swift */; };
 		4A63931A193EBF0E00E9E1CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A639318193EBF0E00E9E1CC /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 		4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinuousPushViewController.swift; sourceTree = "<group>"; };
 		4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantaneousPushViewController.swift; sourceTree = "<group>"; };
 		4A5192DE194711C400FCC66C /* ItemPropertiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemPropertiesViewController.swift; sourceTree = "<group>"; };
+		4A5E830E194AE5A600E53043 /* CompositeBehaviorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeBehaviorViewController.swift; sourceTree = "<group>"; };
+		4A5E8310194AEB3300E53043 /* UIDCPendulumBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDCPendulumBehavior.swift; sourceTree = "<group>"; };
 		4A63930F193EBF0E00E9E1CC /* Flying-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flying-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A639313193EBF0E00E9E1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A639314193EBF0E00E9E1CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */,
 				4A5192DE194711C400FCC66C /* ItemPropertiesViewController.swift */,
 				4A0A190519480FB900630E69 /* CustomDynamicViewController.swift */,
+				4A5E830E194AE5A600E53043 /* CompositeBehaviorViewController.swift */,
+				4A5E8310194AEB3300E53043 /* UIDCPendulumBehavior.swift */,
 				4AEBF72119444B59000E8180 /* UIDCDecorationView.swift */,
 				4A0A19071948152000630E69 /* UIDCPositionToBoundsMapping.swift */,
 			);
@@ -330,12 +336,14 @@
 				4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */,
 				4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */,
 				4A5192DF194711C400FCC66C /* ItemPropertiesViewController.swift in Sources */,
+				4A5E8311194AEB3300E53043 /* UIDCPendulumBehavior.swift in Sources */,
 				4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */,
 				4A639315193EBF0E00E9E1CC /* AppDelegate.swift in Sources */,
 				4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */,
 				4AEBF71E19441099000E8180 /* AttachmentViewController.swift in Sources */,
 				4A0A19081948152000630E69 /* UIDCPositionToBoundsMapping.swift in Sources */,
 				4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */,
+				4A5E830F194AE5A600E53043 /* CompositeBehaviorViewController.swift in Sources */,
 				4A5192DD1947094B00FCC66C /* InstantaneousPushViewController.swift in Sources */,
 				4A5192DB1946FCBE00FCC66C /* ContinuousPushViewController.swift in Sources */,
 			);
