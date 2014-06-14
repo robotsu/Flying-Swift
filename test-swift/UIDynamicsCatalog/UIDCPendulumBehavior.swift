@@ -20,7 +20,7 @@ class UIDCPendulumBehavior: UIDynamicBehavior {
     //
     init(weight item:UIDynamicItem, suspendedFromPoint p:CGPoint)
     {
-        super.init();
+        super.init()
     
         // The high-level pendulum behavior is built from 2 primitive behaviors.
         let gravityBehavior : UIGravityBehavior = UIGravityBehavior(items:[item])
@@ -30,7 +30,7 @@ class UIDCPendulumBehavior: UIDynamicBehavior {
         let draggingBehavior : UIAttachmentBehavior = UIAttachmentBehavior(item:item, attachedToAnchor:CGPointZero)
         let pushBehavior : UIPushBehavior = UIPushBehavior(items:[item], mode:UIPushBehaviorMode.Instantaneous)
         
-        pushBehavior.active = false;
+        pushBehavior.active = false
         
         self.addChildBehavior(gravityBehavior)
         self.addChildBehavior(attachmentBehavior)
@@ -69,11 +69,11 @@ class UIDCPendulumBehavior: UIDynamicBehavior {
         // flinging the pendulum weight).
         magnitude /= 500;
         
-        self.pushBehavior.angle = angle;
-        self.pushBehavior.magnitude = magnitude;
-        self.pushBehavior.active = true;
+        self.pushBehavior.angle = angle
+        self.pushBehavior.magnitude = magnitude
+        self.pushBehavior.active = true
         
-        self.removeChildBehavior(self.draggingBehavior);
+        self.removeChildBehavior(self.draggingBehavior)
     }
     
 }

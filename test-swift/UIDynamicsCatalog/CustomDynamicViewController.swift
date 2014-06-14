@@ -11,8 +11,8 @@ import UIKit
 class CustomDynamicViewController: UIViewController {
     
     @IBOutlet var button1 : UIButton
-    var button1Bounds : CGRect?
-    var animator : UIDynamicAnimator?
+    var button1Bounds : CGRect!
+    var animator : UIDynamicAnimator!
 
     
     init(coder aDecoder: NSCoder!)
@@ -39,7 +39,7 @@ class CustomDynamicViewController: UIViewController {
         // before it came to rest (e.g. the user tapped the button twice in quick
         // succession).  Without reverting to the initial bounds, this would cause
         // the button to grow uncontrollably in size.
-        self.button1Bounds = self.button1.bounds;
+        self.button1Bounds = self.button1.bounds
         
         // Force the button image to scale with its bounds.
         self.button1.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Fill
@@ -59,10 +59,10 @@ class CustomDynamicViewController: UIViewController {
         
         // Reset the buttons bounds to their initial state.  See the comment in
         // -viewDidLoad.
-        self.button1.bounds = self.button1Bounds!
+        self.button1.bounds = self.button1Bounds
         
         // UIDynamicAnimator instances are relatively cheap to create.
-        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view);
+        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
         // APLPositionToBoundsMapping maps the center of an id<ResizableDynamicItem>
         // (UIDynamicItem with mutable bounds) to its bounds.  As dynamics modifies
@@ -89,7 +89,7 @@ class CustomDynamicViewController: UIViewController {
         
         pushBehavior.active = true
         
-        self.animator = animator;
+        self.animator = animator
     }
 
     /*

@@ -2,18 +2,19 @@
 //  GravityViewController.swift
 //  test-swift
 //
-//  Created by Su Wei on 14-6-6.
+//  Created by Su Wei on 14-6-14.
 //  Copyright (c) 2014年 OBJCC.COM. All rights reserved.
 //
 
 import UIKit
 
-class AttachmentViewController: UIViewController {
+class CollisionsGravitySpringViewController: UIViewController {
     //! The view that displays the attachment point on square1.
-    @IBOutlet var square1AttachmentView : UIImageView
+    var square1AttachmentView : UIImageView!
     //! The view that the user drags to move square1.
-    @IBOutlet var attachmentView : UIImageView
-    @IBOutlet var square1 : UIView
+    var attachmentView : UIImageView!
+    var square1 : UIView!
+
     var animator : UIDynamicAnimator!
     var attachmentBehavior : UIAttachmentBehavior!
     
@@ -31,6 +32,23 @@ class AttachmentViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        
+        let box1:UIImageView = UIImageView(image:UIImage(named:"box1"))
+        self.attachmentView = UIImageView(image:UIImage(named:"AttachmentPoint_Mask"))
+        self.square1AttachmentView = UIImageView(image:UIImage(named:"AttachmentPoint_Mask"))
+        
+        self.attachmentView.center = CGPointMake(self.view.center.x, 170)
+        
+        self.square1 = UIView(frame: box1.frame)
+        self.square1.center = CGPointMake(self.view.center.x, 320)
+        self.square1.addSubview(box1)
+        self.square1.addSubview(square1AttachmentView)
+        
+        self.view.addSubview(self.square1)
+        self.view.addSubview(self.attachmentView)
+  
         
         let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
@@ -63,9 +81,16 @@ class AttachmentViewController: UIViewController {
         // Visually show the connection between the attachment points.
         (self.view as UIDCDecorationView).trackAndDrawAttachmentFromView(self.attachmentView, toView:self.square1, withAttachmentOffset:CGPointMake(-25.0, -25.0));
         
+        // These parameters set the attachment in spring mode, instead of a rigid
+        // connection.
+        attachmentBehavior.frequency = 1.0
+        attachmentBehavior.damping = 0.1
+        let gravityBehavior:UIGravityBehavior = UIGravityBehavior(items:[self.square1])
+        animator.addBehavior(gravityBehavior)
+        
         self.animator = animator;
         
-        JLToast.makeText("Maybe ios8 beta's bug, not working properly").show()
+        JLToast.makeText("A little different from the apple's for fun").show()
         
     }
 

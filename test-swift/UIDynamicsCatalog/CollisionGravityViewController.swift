@@ -11,25 +11,25 @@ import UIKit
 class CollisionGravityViewController: UIViewController, UICollisionBehaviorDelegate{
     
     @IBOutlet var box1 : UIImageView
-    var animator : UIDynamicAnimator?
+    var animator : UIDynamicAnimator!
     
     //| ----------------------------------------------------------------------------
     override func viewDidAppear(animated:Bool)
     {
-        super.viewDidAppear(animated);
+        super.viewDidAppear(animated)
         
-        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view);
+        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
-        let gravityBeahvior:UIGravityBehavior = UIGravityBehavior(items:[self.box1]);
-        animator.addBehavior(gravityBeahvior);
+        let gravityBeahvior:UIGravityBehavior = UIGravityBehavior(items:[self.box1])
+        animator.addBehavior(gravityBeahvior)
         
         
-        let collisionBehavior:UICollisionBehavior = UICollisionBehavior(items:[self.box1]);
+        let collisionBehavior:UICollisionBehavior = UICollisionBehavior(items:[self.box1])
         // Creates collision boundaries from the bounds of the dynamic animator's
         // reference view (self.view).
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true;
-        collisionBehavior.collisionDelegate = self;
-        animator.addBehavior(collisionBehavior);
+        collisionBehavior.collisionDelegate = self
+        animator.addBehavior(collisionBehavior)
         
         self.animator = animator;
     }
@@ -58,7 +58,7 @@ class CollisionGravityViewController: UIViewController, UICollisionBehaviorDeleg
     
     {
         // Restore the default color when ending a contcact.
-        (item as UIView).tintColor = UIColor.darkGrayColor();
+        (item as UIView).tintColor = UIColor.darkGrayColor()
     }
     
     

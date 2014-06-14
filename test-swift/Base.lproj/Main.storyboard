@@ -623,6 +623,26 @@
                                             <segue destination="o63-7U-xmL" kind="show" id="hnv-Rt-fF7"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="kzA-B8-Hpj" style="IBUITableViewCellStyleDefault" id="n7J-bE-jEZ">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n7J-bE-jEZ" id="4hv-if-9yd">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Collision + Gravity + Spring" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kzA-B8-Hpj">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TED-v6-Zya" kind="show" id="YxO-lH-XyN"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cmv-JT-5W4" style="IBUITableViewCellStyleDefault" id="7Os-eC-daE">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Os-eC-daE" id="Aql-tU-nVb">
@@ -1499,6 +1519,35 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3409" y="58"/>
+        </scene>
+        <!--Collisions Gravity Spring View Controller - Collision+Gravity+Spring-->
+        <scene sceneID="BH1-sF-vmQ">
+            <objects>
+                <viewController id="TED-v6-Zya" customClass="CollisionsGravitySpringViewController" customModule="Flying_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IkR-vd-B4a"/>
+                        <viewControllerLayoutGuide type="bottom" id="z33-i2-ehi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BGL-mJ-Ny1" customClass="UIDCDecorationView" customModule="Flying_Swift" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="00b-wn-oeN" appends="YES" id="0db-kX-Wdh"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Collision+Gravity+Spring" id="RVC-22-1LG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDm-aG-x1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="00b-wn-oeN">
+                    <connections>
+                        <action selector="handleAttachmentGesture:" destination="TED-v6-Zya" id="fft-bA-pjl"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3915" y="58"/>
         </scene>
     </scenes>
     <resources>

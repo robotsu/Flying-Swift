@@ -11,9 +11,9 @@ import UIKit
 class SnapViewController: UIViewController {
     
     @IBOutlet var box1 : UIImageView
-    var animator : UIDynamicAnimator?
+    var animator : UIDynamicAnimator!
     //! Reference to the previously applied snap behavior.
-    var snapBehavior:UISnapBehavior?
+    var snapBehavior:UISnapBehavior!
     
     init(coder aDecoder: NSCoder!)
     {
@@ -31,8 +31,8 @@ class SnapViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
-        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view);
-        self.animator = animator;
+        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+        self.animator = animator
     }
     
     @IBAction func handelSnapGesture(gesture : UITapGestureRecognizer) {
@@ -44,7 +44,7 @@ class SnapViewController: UIViewController {
         var snapBehavior:UISnapBehavior = UISnapBehavior(item:self.box1, snapToPoint:point)
         self.animator!.addBehavior(snapBehavior)
         
-        self.snapBehavior = snapBehavior;
+        self.snapBehavior = snapBehavior
     }
 
     override func didReceiveMemoryWarning() {

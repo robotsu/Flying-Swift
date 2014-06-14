@@ -11,19 +11,19 @@ import UIKit
 class GravityViewController: UIViewController {
     
     @IBOutlet var box1 : UIImageView
-    var animator : UIDynamicAnimator?
+    var animator : UIDynamicAnimator!
     
     //| ----------------------------------------------------------------------------
     override func viewDidAppear(animated:Bool)
     {
-        super.viewDidAppear(animated);
+        super.viewDidAppear(animated)
         
-        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view);
+        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
         let gravityBeahvior:UIGravityBehavior = UIGravityBehavior(items:[self.box1]);
-        animator.addBehavior(gravityBeahvior);
+        animator.addBehavior(gravityBeahvior)
         
-        self.animator = animator;
+        self.animator = animator
     }
     
     init(coder aDecoder: NSCoder!)

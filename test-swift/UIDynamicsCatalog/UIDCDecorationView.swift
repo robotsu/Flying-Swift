@@ -52,28 +52,28 @@ class UIDCDecorationView: UIView {
         if (!self.arrowView)
         // First time initialization.
         {
-            var arrowImage:UIImage = UIImage(named:"Arrow").imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
+            var arrowImage:UIImage = UIImage(named:"Arrow").imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
             
-            var arrowImageView:UIImageView = UIImageView(image:arrowImage);
-            arrowImageView.bounds = CGRectMake(0, 0, arrowImage.size.width, arrowImage.size.height);
-            arrowImageView.contentMode = UIViewContentMode.Right;
-            arrowImageView.clipsToBounds = true;
-            arrowImageView.layer.anchorPoint = CGPointMake(0.0, 0.5);
+            var arrowImageView:UIImageView = UIImageView(image:arrowImage)
+            arrowImageView.bounds = CGRectMake(0, 0, arrowImage.size.width, arrowImage.size.height)
+            arrowImageView.contentMode = UIViewContentMode.Right
+            arrowImageView.clipsToBounds = true
+            arrowImageView.layer.anchorPoint = CGPointMake(0.0, 0.5)
             
-            self.addSubview(arrowImageView);
-            self.sendSubviewToBack(arrowImageView);
-            self.arrowView = arrowImageView;
+            self.addSubview(arrowImageView)
+            self.sendSubviewToBack(arrowImageView)
+            self.arrowView = arrowImageView
         }
         
-        self.arrowView!.bounds = CGRectMake(0, 0, length, self.arrowView!.bounds.size.height);
-        self.arrowView!.transform = CGAffineTransformMakeRotation(angle);
-        self.arrowView!.tintColor = arrowColor;
-        self.arrowView!.alpha = 1;
+        self.arrowView!.bounds = CGRectMake(0, 0, length, self.arrowView!.bounds.size.height)
+        self.arrowView!.transform = CGAffineTransformMakeRotation(angle)
+        self.arrowView!.tintColor = arrowColor
+        self.arrowView!.alpha = 1
         
         if (temporary){
             UIView.animateWithDuration(1.0, animations:{
-                self.arrowView!.alpha = 0;
-            });
+                self.arrowView!.alpha = 0
+            })
         }
     }
     
@@ -126,7 +126,7 @@ class UIDCDecorationView: UIView {
     //| ----------------------------------------------------------------------------
     override func layoutSubviews()
     {
-        super.layoutSubviews();
+        super.layoutSubviews()
         
         if(self.arrowView){
             self.arrowView!.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
@@ -142,7 +142,7 @@ class UIDCDecorationView: UIView {
             // between attachmentPointView and attachedView to account for a change
             // in the position of either.
         
-            let MaxDashes = self.attachmentDecorationLayers!.count;
+            let MaxDashes = self.attachmentDecorationLayers!.count
             
             print("11111->")
             println(self.attachmentPointView)
@@ -162,8 +162,8 @@ class UIDCDecorationView: UIView {
             
             var angle:CDouble = atan2( Double(attachedViewAttachmentPoint.y - attachmentPointViewCenter.y), Double(attachedViewAttachmentPoint.x - attachmentPointViewCenter.x))
             
-            var requiredDashes = 0;
-            var d:CGFloat = 0.0;
+            var requiredDashes = 0
+            var d:CGFloat = 0.0
         
             // Depending on the distance between the two views, a smaller number of
             // dashes may be needed to adequately visualize the attachment.  Starting
@@ -180,7 +180,7 @@ class UIDCDecorationView: UIView {
                     dashLayer.hidden = false;
                     requiredDashes++;
                 } else {
-                    break;
+                    break
                 }
             }
         
@@ -216,7 +216,7 @@ class UIDCDecorationView: UIView {
                 transform = CGAffineTransformTranslate(transform, 0, dashLayer.bounds.size.height);
             }
             
-            CATransaction.commit();
+            CATransaction.commit()
         }
     }
 

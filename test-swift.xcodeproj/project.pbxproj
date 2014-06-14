@@ -23,6 +23,7 @@
 		4A639332193ED2A500E9E1CC /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A639331193ED2A500E9E1CC /* swift.png */; };
 		4A639334193EE20200E9E1CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A639333193EE20200E9E1CC /* QuartzCore.framework */; };
 		4A639336193EF44000E9E1CC /* weibo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4A639335193EF44000E9E1CC /* weibo.JPG */; };
+		4A63EB19194C3EC9000FA2F5 /* CollisionsGravitySpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63EB18194C3EC9000FA2F5 /* CollisionsGravitySpringViewController.swift */; };
 		4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E45C1940143000B766AB /* DemoTableViewController.swift */; };
 		4A67E46219404E5F00B766AB /* UITableViewSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E46119404E5F00B766AB /* UITableViewSwiftViewController.swift */; };
 		4A67E468194061E900B766AB /* JLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E464194061E900B766AB /* JLToast.swift */; };
@@ -76,6 +77,7 @@
 		4A639331193ED2A500E9E1CC /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
 		4A639333193EE20200E9E1CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4A639335193EF44000E9E1CC /* weibo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weibo.JPG; sourceTree = "<group>"; };
+		4A63EB18194C3EC9000FA2F5 /* CollisionsGravitySpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionsGravitySpringViewController.swift; sourceTree = "<group>"; };
 		4A67E45C1940143000B766AB /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 		4A67E46119404E5F00B766AB /* UITableViewSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSwiftViewController.swift; sourceTree = "<group>"; };
 		4A67E464194061E900B766AB /* JLToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToast.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				4AE7EA9819417B4900C45C18 /* GravityViewController.swift */,
 				4ACBA80F1943172300058977 /* CollisionGravityViewController.swift */,
 				4AEBF71D19441099000E8180 /* AttachmentViewController.swift */,
+				4A63EB18194C3EC9000FA2F5 /* CollisionsGravitySpringViewController.swift */,
 				4A5192D81946F1FC00FCC66C /* SnapViewController.swift */,
 				4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */,
 				4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */,
@@ -340,6 +343,7 @@
 				4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */,
 				4A639315193EBF0E00E9E1CC /* AppDelegate.swift in Sources */,
 				4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */,
+				4A63EB19194C3EC9000FA2F5 /* CollisionsGravitySpringViewController.swift in Sources */,
 				4AEBF71E19441099000E8180 /* AttachmentViewController.swift in Sources */,
 				4A0A19081948152000630E69 /* UIDCPositionToBoundsMapping.swift in Sources */,
 				4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */,

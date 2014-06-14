@@ -11,9 +11,8 @@ import UIKit
 class ContinuousPushViewController: UIViewController {
     
     @IBOutlet var box1 : UIImageView
-    var animator : UIDynamicAnimator?
-    //! Reference to the previously applied snap behavior.
-    var pushBehavior:UIPushBehavior?;
+    var animator : UIDynamicAnimator!
+    var pushBehavior:UIPushBehavior!
     
     init(coder aDecoder: NSCoder!)
     {
@@ -35,7 +34,7 @@ class ContinuousPushViewController: UIViewController {
     //| ----------------------------------------------------------------------------
     override func viewDidAppear(animated:Bool)
     {
-        super.viewDidAppear(animated);
+        super.viewDidAppear(animated)
         
         let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         

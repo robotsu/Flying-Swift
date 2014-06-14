@@ -12,14 +12,14 @@ class ItemPropertiesViewController: UIViewController {
     
     @IBOutlet var square1 : UIImageView
     @IBOutlet var square2 : UIImageView
-    var square1PropertiesBehavior:UIDynamicItemBehavior?
-    var square2PropertiesBehavior:UIDynamicItemBehavior?
-    var animator : UIDynamicAnimator?
+    var square1PropertiesBehavior:UIDynamicItemBehavior!
+    var square2PropertiesBehavior:UIDynamicItemBehavior!
+    var animator : UIDynamicAnimator!
     
     //| ----------------------------------------------------------------------------
     override func viewDidAppear(animated:Bool)
     {
-        super.viewDidAppear(animated);
+        super.viewDidAppear(animated)
         
         let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         

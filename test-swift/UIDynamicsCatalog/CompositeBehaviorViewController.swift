@@ -41,10 +41,7 @@ class CompositeBehaviorViewController: UIViewController {
         self.view.addSubview(self.box1)
         self.view.addSubview(self.attachmentPoint)
         
-        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view);
-        
-        //let gravityBeahvior:UIGravityBehavior = UIGravityBehavior(items:[self.box1]);
-        //animator.addBehavior(gravityBeahvior);
+        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
         self.attachmentPoint.tintColor = UIColor.redColor()
         self.attachmentPoint.image = self.attachmentPoint.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
