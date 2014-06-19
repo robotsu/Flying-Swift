@@ -10,6 +10,8 @@ Flying-Swift项目是一个纯Swift语言开发的Xcode6, iOS7/8项目，免费�
 
 History:
 
+2014.6.19 Add BlogViewController etc. to read blogs titles from my site: http://blog.objcc.com
+
 2014.6.14 Add CollisionsGravitySpringViewController which is a little
 different from the apple's, just for fun.
 

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4A0A190619480FB900630E69 /* CustomDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A190519480FB900630E69 /* CustomDynamicViewController.swift */; };
 		4A0A19081948152000630E69 /* UIDCPositionToBoundsMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A19071948152000630E69 /* UIDCPositionToBoundsMapping.swift */; };
+		4A2A6651195319D8008C40FF /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A6650195319D8008C40FF /* BlogViewController.swift */; };
+		4A2A665A1953209A008C40FF /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A66581953209A008C40FF /* BlogTableViewCell.swift */; };
+		4A2A665B1953209A008C40FF /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2A66591953209A008C40FF /* BlogTableViewCell.xib */; };
 		4A5192D91946F1FC00FCC66C /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192D81946F1FC00FCC66C /* SnapViewController.swift */; };
 		4A5192DB1946FCBE00FCC66C /* ContinuousPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */; };
 		4A5192DD1947094B00FCC66C /* InstantaneousPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */; };
@@ -59,6 +62,9 @@
 /* Begin PBXFileReference section */
 		4A0A190519480FB900630E69 /* CustomDynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDynamicViewController.swift; sourceTree = "<group>"; };
 		4A0A19071948152000630E69 /* UIDCPositionToBoundsMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDCPositionToBoundsMapping.swift; sourceTree = "<group>"; };
+		4A2A6650195319D8008C40FF /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		4A2A66581953209A008C40FF /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
+		4A2A66591953209A008C40FF /* BlogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogTableViewCell.xib; sourceTree = "<group>"; };
 		4A5192D81946F1FC00FCC66C /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 		4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinuousPushViewController.swift; sourceTree = "<group>"; };
 		4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantaneousPushViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A2A664D19530E4C008C40FF /* ObjccBlog */ = {
+			isa = PBXGroup;
+			children = (
+				4A2A6650195319D8008C40FF /* BlogViewController.swift */,
+				4A2A66581953209A008C40FF /* BlogTableViewCell.swift */,
+				4A2A66591953209A008C40FF /* BlogTableViewCell.xib */,
+			);
+			path = ObjccBlog;
+			sourceTree = "<group>";
+		};
 		4A639306193EBF0E00E9E1CC = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +150,7 @@
 		4A639311193EBF0E00E9E1CC /* test-swift */ = {
 			isa = PBXGroup;
 			children = (
+				4A2A664D19530E4C008C40FF /* ObjccBlog */,
 				4AE7EA9C1941961100C45C18 /* UICatalog */,
 				4AE7EA9719417B0700C45C18 /* UIDynamicsCatalog */,
 				4A67E463194061E900B766AB /* JLToast */,
@@ -310,6 +327,7 @@
 				4A639336193EF44000E9E1CC /* weibo.JPG in Resources */,
 				4AE7EA9B1941936100C45C18 /* Box1@2x.png in Resources */,
 				4A63931C193EBF0E00E9E1CC /* Images.xcassets in Resources */,
+				4A2A665B1953209A008C40FF /* BlogTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +365,9 @@
 				4AEBF71E19441099000E8180 /* AttachmentViewController.swift in Sources */,
 				4A0A19081948152000630E69 /* UIDCPositionToBoundsMapping.swift in Sources */,
 				4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */,
+				4A2A6651195319D8008C40FF /* BlogViewController.swift in Sources */,
 				4A5E830F194AE5A600E53043 /* CompositeBehaviorViewController.swift in Sources */,
+				4A2A665A1953209A008C40FF /* BlogTableViewCell.swift in Sources */,
 				4A5192DD1947094B00FCC66C /* InstantaneousPushViewController.swift in Sources */,
 				4A5192DB1946FCBE00FCC66C /* ContinuousPushViewController.swift in Sources */,
 			);
