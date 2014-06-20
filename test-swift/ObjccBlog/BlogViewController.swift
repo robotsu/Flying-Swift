@@ -11,9 +11,10 @@ import UIKit
 class BlogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var tableview: UITableView?
-    let posts:NSMutableArray = NSMutableArray()
+    let posts = NSMutableArray()
     let identifier = "cell"
-    let indicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle:UIActivityIndicatorViewStyle.Gray)
+    let indicator = UIActivityIndicatorView(activityIndicatorStyle:UIActivityIndicatorViewStyle.Gray)
+    let refreshControl = UIRefreshControl();
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,30 +30,20 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         var nib = UINib(nibName:"BlogTableViewCell", bundle: nil)
         
         self.tableview!.registerNib(nib, forCellReuseIdentifier: identifier)
+        //self.tableview!.estimatedRowHeight = 44.0
+        //self.tableview!.rowHeight = UITableViewAutomaticDimension
         
         self.view.addSubview(self.tableview)
         
         self.indicator.center = self.view.center
+        self.indicator.hidesWhenStopped = true
         self.view.addSubview(self.indicator)
         
+        self.tableview!.addSubview(refreshControl)
+        refreshControl.addTarget(self, action:"refreshTable", forControlEvents:UIControlEvents.ValueChanged)
+        
         self.indicator.startAnimating()
-        getJsonData( { data in
-            if data as NSObject == NSNull() {
-                JLToast.makeText("Network Error").show()
-                return
-            }
-            
-            //println(data)
-            
-            var arr = data["posts"] as NSArray
-            
-            for data : AnyObject in arr {
-                self.posts.addObject(data)
-            }
-                        
-            self.tableview!.reloadData()
-            self.indicator.hidden = true
-        })
+        refreshTable()
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +80,10 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         var index = indexPath!.row
         JLToast.makeText("row #\(index) selected").show()
+    }
+    
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return 100
     }
     
     /*
@@ -155,6 +150,33 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
                 dispatch_async(dispatch_get_main_queue(), {
                         completionHandler(data:jsonData)
                 })
+            }
+        })
+    }
+    
+    func refreshTable () {
+        getJsonData( { data in
+            if data as NSObject == NSNull() {
+                JLToast.makeText("Network Error").show()
+                return
+            }
+            
+            //println(data)
+            
+            var arr = data["posts"] as NSArray
+            
+            for data : AnyObject in arr {
+                self.posts.addObject(data)
+            }
+            
+            self.tableview!.reloadData()
+            
+            if self.indicator.isAnimating() {
+                self.indicator.stopAnimating()
+            }
+            
+            if self.refreshControl.refreshing {
+                self.refreshControl.endRefreshing()
             }
         })
     }

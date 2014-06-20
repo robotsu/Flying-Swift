@@ -973,7 +973,7 @@
             </objects>
             <point key="canvasLocation" x="1316" y="-152"/>
         </scene>
-        <!--Table View Controller - Apple Sample Trans-->
+        <!--Table View Controller - Apple Samples Migration-->
         <scene sceneID="xLm-fu-06N">
             <objects>
                 <tableViewController id="ihO-cD-AsS" sceneMemberID="viewController">
@@ -1033,7 +1033,7 @@
                             <outlet property="delegate" destination="ihO-cD-AsS" id="iQx-eD-jJJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Apple Sample Trans" id="Ee0-0A-tCX"/>
+                    <navigationItem key="navigationItem" title="Apple Samples Migration" id="Ee0-0A-tCX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTm-y0-Q8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

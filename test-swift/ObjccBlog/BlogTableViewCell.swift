@@ -12,6 +12,7 @@ class BlogTableViewCell: UITableViewCell {
     
     var post :NSDictionary!
 
+    @IBOutlet var titleImage : UIImageView
     @IBOutlet var titleLabel : UILabel
     
     override func awakeFromNib() {
@@ -26,8 +27,16 @@ class BlogTableViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-        super.layoutSubviews()
+        //self.titleImage.contentMode = UIViewContentMode.ScaleToFill
+        
+        let url = ((post["attachments"] as NSArray)[0] as NSDictionary)["url"] as String
+        self.titleImage.setImage(url, placeHolder: UIImage(named: "BackgroundTile"))
+        
+        self.titleImage.frame = CGRectMake(6,6,88,88);
+
         self.titleLabel.text = post["title"] as String
+        self.titleLabel.numberOfLines = 0
+        super.layoutSubviews()
     }
     
 }
