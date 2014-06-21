@@ -28,7 +28,6 @@
 		4A639336193EF44000E9E1CC /* weibo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4A639335193EF44000E9E1CC /* weibo.JPG */; };
 		4A63EB19194C3EC9000FA2F5 /* CollisionsGravitySpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63EB18194C3EC9000FA2F5 /* CollisionsGravitySpringViewController.swift */; };
 		4A67E45D1940143000B766AB /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E45C1940143000B766AB /* DemoTableViewController.swift */; };
-		4A67E46219404E5F00B766AB /* UITableViewSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E46119404E5F00B766AB /* UITableViewSwiftViewController.swift */; };
 		4A67E468194061E900B766AB /* JLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E464194061E900B766AB /* JLToast.swift */; };
 		4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E465194061E900B766AB /* JLToastCenter.swift */; };
 		4A67E46A194061E900B766AB /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E466194061E900B766AB /* JLToastView.swift */; };
@@ -86,7 +85,6 @@
 		4A639335193EF44000E9E1CC /* weibo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weibo.JPG; sourceTree = "<group>"; };
 		4A63EB18194C3EC9000FA2F5 /* CollisionsGravitySpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionsGravitySpringViewController.swift; sourceTree = "<group>"; };
 		4A67E45C1940143000B766AB /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
-		4A67E46119404E5F00B766AB /* UITableViewSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSwiftViewController.swift; sourceTree = "<group>"; };
 		4A67E464194061E900B766AB /* JLToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToast.swift; sourceTree = "<group>"; };
 		4A67E465194061E900B766AB /* JLToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastCenter.swift; sourceTree = "<group>"; };
 		4A67E466194061E900B766AB /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				4AE7EA9C1941961100C45C18 /* UICatalog */,
 				4AE7EA9719417B0700C45C18 /* UIDynamicsCatalog */,
 				4A67E463194061E900B766AB /* JLToast */,
-				4A67E46019404E5F00B766AB /* UITableView-Swift */,
 				4A639335193EF44000E9E1CC /* weibo.JPG */,
 				4A639331193ED2A500E9E1CC /* swift.png */,
 				4A639314193EBF0E00E9E1CC /* AppDelegate.swift */,
@@ -193,14 +190,6 @@
 				4A639326193EBF0E00E9E1CC /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4A67E46019404E5F00B766AB /* UITableView-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				4A67E46119404E5F00B766AB /* UITableViewSwiftViewController.swift */,
-			);
-			path = "UITableView-Swift";
 			sourceTree = "<group>";
 		};
 		4A67E463194061E900B766AB /* JLToast */ = {
@@ -364,7 +353,6 @@
 				4A67E46A194061E900B766AB /* JLToastView.swift in Sources */,
 				4A0A190619480FB900630E69 /* CustomDynamicViewController.swift in Sources */,
 				4ABCC03A19419EAB0037E9F2 /* ActivityIndicatorViewController.swift in Sources */,
-				4A67E46219404E5F00B766AB /* UITableViewSwiftViewController.swift in Sources */,
 				4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */,
 				4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */,
 				4A5192DF194711C400FCC66C /* ItemPropertiesViewController.swift in Sources */,

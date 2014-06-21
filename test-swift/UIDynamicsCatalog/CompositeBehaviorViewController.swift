@@ -1,5 +1,5 @@
 //
-//  GravityViewController.swift
+//  CompositeBehaviorViewController.swift
 //  test-swift
 //
 //  Created by Su Wei on 14-6-13.

@@ -1,5 +1,5 @@
 //
-//  GravityViewController.swift
+//  SnapViewController.swift
 //  test-swift
 //
 //  Created by Su Wei on 14-6-10.

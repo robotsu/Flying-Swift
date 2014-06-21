@@ -1,14 +1,69 @@
 Flying-Swift
 ============
 
-A Swift simple project
+Description:
+-------------
 
-Flying-Swift is a open source project developed using iOS Swift
-Language, which is released by Apple in WWDC2014 yesterday. Hope you enjoy it and star it, thanks!
+Flying-Swift is a fun open source project developed using Apple's Swift
+Language, which is released the day after Apple's WWDC2014 Swift distribution day. Hope you enjoy it it, thanks!
 
-Flying-Swift项目是一个纯Swift语言开发的Xcode6, iOS7/8项目，免费下载研究使用，喜欢的请转发并Star一下，谢谢。
 
-History:
+BUILD REQUIREMENTS:
+-------------
+
+iOS 8.0 SDK or later
+ 
+
+RUNTIME REQUIREMENTS:
+-------------
+
+iOS 7.0 or later
+
+
+PACKAGING LIST:
+-------------
+
+### Apple's UIKit Dynamic Catalogs Migration to Swift ######
+
+*  GravityViewController.swift
+*  CollisionGravityViewController.swift
+*  AttachmentViewController.swift
+*  CollisionsGravitySpringViewController.swift
+*  SnapViewController.swift
+*  ContinuousPushViewController.swift
+*  InstantaneousPushViewController.swift
+*  ItemPropertiesViewController.swift
+*  CustomDynamicViewController.swift
+*  CompositeBehaviorViewController.swift
+*  UIDCPendulumBehavior.swift
+*  UIDCDecorationView.swift
+*  UIDCPositionToBoundsMapping.swift
+
+
+### Blog site: blog.objcc.com 's web client ######
+
+*  BlogViewController.swift
+*  BlogTableViewCell.swift
+*  UIImageView+WebCache.swift
+
+
+SNAPSHOT:
+-------------
+
+![Flying Swift Cover Page](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-5-191x300.png)
+
+![Objcc.com Blog Client ](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-4.png)
+
+![Dynamics Catalog: Pendulum](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-3-191x300.png)
+
+![Dynamics Catalog: Instantaneous Push + Collision](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-3-191x300.png)
+
+![Dynamics Catalog: Attachments + Collision](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-3-191x300.png)
+
+
+HISTORY:
+-------------
+2014.6.21 Add Snapshots and update readme.
 
 2014.6.20 Add Pull to refresh to BlogViewController and load blogs image from my site: http://blog.objcc.com
 
@@ -47,11 +102,10 @@ different from the apple's, just for fun.
 
 2014.6.6 Add apples UICategory and UIKit Dynamic Catagory, still working on it.
 
-2014.6.5 Add OPEN SOUSE DEMONSTRATION: 
+2014.6.5 Using OPEN SOUSE JLToast to show Android like Toast alert
+message: 
 
 [JLToast] from SuYeol Jeon
-
-[UITableView-Swift] from YANGReal
 
 2014.6.4 Create this project 
 
@@ -61,4 +115,3 @@ blog: [objcc.com][2]
 [1]: http://weibo.com/objcc "suwei76"
 [2]: http://objcc.com "OBJCC.COM"
 [JLToast]: https://github.com/devxoul/JLToast "JLToast"
-[UITableView-Swift]: https://github.com/YANGReal/UITableView-Swift "UITableView-Swift"

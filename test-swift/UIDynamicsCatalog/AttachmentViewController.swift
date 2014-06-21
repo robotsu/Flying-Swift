@@ -1,5 +1,5 @@
 //
-//  GravityViewController.swift
+//  AttachmentViewController.swift
 //  test-swift
 //
 //  Created by Su Wei on 14-6-6.

@@ -12,15 +12,13 @@ class DemoTableViewController: UITableViewController {
     
     let celldata = [
         [ "title":"Objcc Blog",  "desc":"作者: Robot(@suwei76)", "url":"http://blog.objcc.com"],
-        [ "title":"UITableView-Swift",  "desc":"作者: YANGReal, UITableView 增删改", "url":"https://github.com/YANGReal/UITableView-Swift"],
-        [ "title":"JLToast", "desc":"作者: SuYeol Jeon, Toast for iOS with very simple interface.", "url":"https://github.com/devxoul"]
+        //[ "title":"JLToast", "desc":"作者: SuYeol Jeon, Toast for iOS with very simple interface.", "url":"https://github.com/devxoul"]
     ]
     
-    let vcdata = [  "UITableView-Swift": UITableViewSwiftViewController(),
-                    "JLToast": JLTostViewController(),
+    let vcdata = [
+                    //"JLToast": JLTostViewController(),
                     "Objcc Blog": BlogViewController(),
                     ]
-
 
     
     //http://stackoverflow.com/questions/24036393/fatal-error-use-of-unimplemented-initializer-initcoder-for-class
