@@ -51,11 +51,9 @@ SNAPSHOT:
 -------------
 
 ![Flying Swift Cover Page](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-5-191x300.png)
-
-![Objcc.com Blog Client ](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-4.png)
+![Objcc.com Blog Client](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-4-191x300.png)
 
 ![Dynamics Catalog: Pendulum](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-3-191x300.png)
-
 ![Dynamics Catalog: Instantaneous Push + Collision](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-3-191x300.png)
 
 ![Dynamics Catalog: Attachments + Collision](http://blog.objcc.com/wp-content/uploads/2014/06/flying-swift-intro-3-191x300.png)
