@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A0A190619480FB900630E69 /* CustomDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A190519480FB900630E69 /* CustomDynamicViewController.swift */; };
 		4A0A19081948152000630E69 /* UIDCPositionToBoundsMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A19071948152000630E69 /* UIDCPositionToBoundsMapping.swift */; };
+		4A0FA901195D23FB007BE198 /* BlogWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0FA900195D23FB007BE198 /* BlogWebViewController.swift */; };
 		4A2A6651195319D8008C40FF /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A6650195319D8008C40FF /* BlogViewController.swift */; };
 		4A2A665A1953209A008C40FF /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A66581953209A008C40FF /* BlogTableViewCell.swift */; };
 		4A2A665B1953209A008C40FF /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2A66591953209A008C40FF /* BlogTableViewCell.xib */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		4A0A190519480FB900630E69 /* CustomDynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDynamicViewController.swift; sourceTree = "<group>"; };
 		4A0A19071948152000630E69 /* UIDCPositionToBoundsMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDCPositionToBoundsMapping.swift; sourceTree = "<group>"; };
+		4A0FA900195D23FB007BE198 /* BlogWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogWebViewController.swift; sourceTree = "<group>"; };
 		4A2A6650195319D8008C40FF /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		4A2A66581953209A008C40FF /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		4A2A66591953209A008C40FF /* BlogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogTableViewCell.xib; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				4A2A6650195319D8008C40FF /* BlogViewController.swift */,
 				4A2A66581953209A008C40FF /* BlogTableViewCell.swift */,
 				4A2A66591953209A008C40FF /* BlogTableViewCell.xib */,
+				4A0FA900195D23FB007BE198 /* BlogWebViewController.swift */,
 			);
 			path = ObjccBlog;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				4AEBF72219444B59000E8180 /* UIDCDecorationView.swift in Sources */,
 				4A67E46A194061E900B766AB /* JLToastView.swift in Sources */,
 				4A0A190619480FB900630E69 /* CustomDynamicViewController.swift in Sources */,
+				4A0FA901195D23FB007BE198 /* BlogWebViewController.swift in Sources */,
 				4ABCC03A19419EAB0037E9F2 /* ActivityIndicatorViewController.swift in Sources */,
 				4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */,
 				4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */,

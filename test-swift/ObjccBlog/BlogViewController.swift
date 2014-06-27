@@ -14,7 +14,9 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
     let posts = NSMutableArray()
     let identifier = "cell"
     let indicator = UIActivityIndicatorView(activityIndicatorStyle:UIActivityIndicatorViewStyle.Gray)
-    let refreshControl = UIRefreshControl();
+    let refreshControl = UIRefreshControl()
+    
+    let wvc = BlogWebViewController(nibName:nil, bundle:nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +81,11 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
         var index = indexPath!.row
-        JLToast.makeText("row #\(index) selected").show()
+        //JLToast.makeText("row #\(index) selected").show()
+        
+        let urlString = (self.posts[index] as NSDictionary )["url"] as? String
+        wvc.loadUrl(string: urlString!)
+        self.navigationController.pushViewController(wvc, animated:true)
     }
     
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
