@@ -74,7 +74,7 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Configure the cell...
         
         var index = indexPath!.row
-        cell.post = self.posts[index] as NSDictionary
+        cell.post = self.posts[index] as BlogPost
         return cell
     }
     
@@ -83,8 +83,8 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         var index = indexPath!.row
         //JLToast.makeText("row #\(index) selected").show()
         
-        let urlString = (self.posts[index] as NSDictionary )["url"] as? String
-        wvc.loadUrl(string: urlString!)
+        let urlString = (self.posts[index] as BlogPost ).post_url
+        wvc.loadUrl(string: urlString)
         self.navigationController.pushViewController(wvc, animated:true)
     }
     
@@ -172,7 +172,19 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
             var arr = data["posts"] as NSArray
             
             for data : AnyObject in arr {
-                self.posts.addObject(data)
+                
+                var title = data["title"] as String
+                var img_url: String = ""
+                let attachments = data["attachments"] as NSArray
+                if attachments.count > 0 {
+                    img_url = (attachments[0] as NSDictionary)["url"] as String
+                }
+                
+                var post_url = data["url"] as String
+                var post = BlogPost(title: title, img_url:img_url, post_url:post_url)
+                
+                self.posts.addObject(post)
+
             }
             
             self.tableview!.reloadData()

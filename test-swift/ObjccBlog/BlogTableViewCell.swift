@@ -10,7 +10,7 @@ import UIKit
 
 class BlogTableViewCell: UITableViewCell {
     
-    var post :NSDictionary!
+    var post :BlogPost!
 
     @IBOutlet var titleImage : UIImageView
     @IBOutlet var titleLabel : UILabel
@@ -29,13 +29,18 @@ class BlogTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         //self.titleImage.contentMode = UIViewContentMode.ScaleToFill
         
-        let url = ((post["attachments"] as NSArray)[0] as NSDictionary)["url"] as String
-        self.titleImage.setImage(url, placeHolder: UIImage(named: "BackgroundTile"))
+        if post.img_url != "" {
+            println(post.title + " url: \(post.img_url)")
+            self.titleImage.setImage(post.img_url, placeHolder: UIImage(named: "BackgroundTile"))
+        }else{
+            self.titleImage.image = UIImage(named: "BackgroundTile")
+        }
         
-        self.titleImage.frame = CGRectMake(6,6,88,88);
-
-        self.titleLabel.text = post["title"] as String
+        self.titleImage.frame = CGRectMake(6,6,88,88)
+        
+        self.titleLabel.text = post.title
         self.titleLabel.numberOfLines = 0
+        
         super.layoutSubviews()
     }
     

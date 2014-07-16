@@ -13,6 +13,7 @@
 		4A2A6651195319D8008C40FF /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A6650195319D8008C40FF /* BlogViewController.swift */; };
 		4A2A665A1953209A008C40FF /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A66581953209A008C40FF /* BlogTableViewCell.swift */; };
 		4A2A665B1953209A008C40FF /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2A66591953209A008C40FF /* BlogTableViewCell.xib */; };
+		4A3CED4E19769AF800134679 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CED4D19769AF800134679 /* BlogPost.swift */; };
 		4A5192D91946F1FC00FCC66C /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192D81946F1FC00FCC66C /* SnapViewController.swift */; };
 		4A5192DB1946FCBE00FCC66C /* ContinuousPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */; };
 		4A5192DD1947094B00FCC66C /* InstantaneousPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */; };
@@ -67,6 +68,7 @@
 		4A2A6650195319D8008C40FF /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		4A2A66581953209A008C40FF /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		4A2A66591953209A008C40FF /* BlogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogTableViewCell.xib; sourceTree = "<group>"; };
+		4A3CED4D19769AF800134679 /* BlogPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
 		4A5192D81946F1FC00FCC66C /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 		4A5192DA1946FCBE00FCC66C /* ContinuousPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinuousPushViewController.swift; sourceTree = "<group>"; };
 		4A5192DC1947094B00FCC66C /* InstantaneousPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantaneousPushViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		4A2A664D19530E4C008C40FF /* ObjccBlog */ = {
 			isa = PBXGroup;
 			children = (
+				4A3CED4C19769AF800134679 /* models */,
 				4A832A6C19546515003B5C0B /* ext */,
 				4A2A6650195319D8008C40FF /* BlogViewController.swift */,
 				4A2A66581953209A008C40FF /* BlogTableViewCell.swift */,
@@ -130,6 +133,14 @@
 				4A0FA900195D23FB007BE198 /* BlogWebViewController.swift */,
 			);
 			path = ObjccBlog;
+			sourceTree = "<group>";
+		};
+		4A3CED4C19769AF800134679 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CED4D19769AF800134679 /* BlogPost.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		4A639306193EBF0E00E9E1CC = {
@@ -360,6 +371,7 @@
 				4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */,
 				4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */,
 				4A5192DF194711C400FCC66C /* ItemPropertiesViewController.swift in Sources */,
+				4A3CED4E19769AF800134679 /* BlogPost.swift in Sources */,
 				4A5E8311194AEB3300E53043 /* UIDCPendulumBehavior.swift in Sources */,
 				4A639317193EBF0E00E9E1CC /* ViewController.swift in Sources */,
 				4A832A6E195466B0003B5C0B /* UIImageView+WebCache.swift in Sources */,
