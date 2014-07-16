@@ -46,6 +46,7 @@ PACKAGING LIST:
 *  BlogTableViewCell.swift
 *  UIImageView+WebCache.swift
 *  BlogWebViewController.swift
+*  BlogPost.swfit
 
 
 SNAPSHOT:
