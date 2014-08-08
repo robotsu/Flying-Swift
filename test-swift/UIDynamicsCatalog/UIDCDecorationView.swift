@@ -157,8 +157,11 @@ class UIDCDecorationView: UIView {
             
             attachedViewAttachmentPoint =  self.attachedView!.convertPoint(attachedViewAttachmentPoint, toView:self)
             
-            var distance:CGFloat = sqrtf( powf(attachedViewAttachmentPoint.x-attachmentPointViewCenter.x, 2.0) +
-            powf(attachedViewAttachmentPoint.y-attachmentPointViewCenter.y, 2.0) )
+            var distance:CGFloat = CGFloat(sqrtf( powf(Float(attachedViewAttachmentPoint.x) - Float(attachmentPointViewCenter.x), 2.0) +
+            powf(Float(attachedViewAttachmentPoint.y) - Float(attachmentPointViewCenter.y), 2.0)
+            ))
+            
+            
             
             var angle:CDouble = atan2( Double(attachedViewAttachmentPoint.y - attachmentPointViewCenter.y), Double(attachedViewAttachmentPoint.x - attachmentPointViewCenter.x))
             

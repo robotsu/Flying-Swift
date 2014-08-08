@@ -62,7 +62,7 @@ class UIDCPendulumBehavior: UIDynamicBehavior {
     //| ----------------------------------------------------------------------------
     func endDraggingWeightWithVelocity(v:CGPoint)
     {
-        var magnitude:CGFloat = sqrtf(powf(v.x, 2.0)+powf(v.y, 2.0));
+        var magnitude:CGFloat = CGFloat(sqrtf(powf(Float(v.x), 2.0)+powf(Float(v.y), 2.0)));
         let angle:CGFloat = CGFloat(atan2(CDouble(v.y), CDouble(v.x)));
         
         // Reduce the volocity to something meaningful.  (Prevents the user from

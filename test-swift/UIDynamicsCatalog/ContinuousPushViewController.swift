@@ -62,7 +62,7 @@ class ContinuousPushViewController: UIViewController {
         // vector.
         var p:CGPoint = gesture.locationInView(self.view)
         var o:CGPoint = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds))
-        var distance:CGFloat = sqrtf(powf(p.x-o.x, 2.0)+powf(p.y-o.y, 2.0))
+        var distance:CGFloat = CGFloat(sqrtf(powf(Float(p.x)-Float(o.x), 2.0)+powf(Float(p.y)-Float(o.y), 2.0)))
         var angle:CGFloat = CGFloat(atan2(CDouble(p.y-o.y), CDouble(p.x-o.x)))
         distance = min(distance, 200.0)
         
