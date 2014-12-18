@@ -65,6 +65,8 @@ SNAPSHOT:
 
 HISTORY:
 -------------
+2014.12.18 Fixed dozens of compile errors caused by ios8 beta-> 8.1 syntax changings.
+
 2014.6.21 Add Snapshots and update readme.
 
 2014.6.20 Add Pull to refresh to BlogViewController and load blogs image from my site: http://blog.objcc.com
