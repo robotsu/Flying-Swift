@@ -19,138 +19,128 @@
 
 import UIKit
 
-struct JLToastDelay {
-    static let ShortDelay: NSTimeInterval = 2.0
-    static let LongDelay: NSTimeInterval = 3.5
+public struct JLToastDelay {
+    public static let ShortDelay: NSTimeInterval = 2.0
+    public static let LongDelay: NSTimeInterval = 3.5
 }
 
-struct JLToastViewValue {
+public struct JLToastViewValue {
     static var FontSize: CGFloat {
-    get {
-        if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone {
-            return 12
-        } else {
-            return 16
-        }
+        return UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone ? 12 : 16
     }
+    
+    static var PortraitOffsetY: CGFloat {
+        return UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone ? 30 : 60
     }
-
-    static var PortraitOffsetY:CGFloat {
-    get {
-        if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone {
-            return 30
-        } else {
-            return 60
-        }
-    }
-    }
-
-    static var LandscapeOffsetY:CGFloat {
-    get {
-        if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone {
-            return 20
-        } else {
-            return 40
-        }
-    }
+    
+    static var LandscapeOffsetY: CGFloat {
+        return UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone ? 20 : 40
     }
 }
 
-class JLToast: NSOperation {
-    var _view: JLToastView?
+@objc public class JLToast: NSOperation {
 
-    var text: String {
-    get {
-        return _view!._textLabel!.text
-    }
-    set(text) {
-        _view!._textLabel!.text = text
-    }
-    }
-    var delay: NSTimeInterval?
-    var duration: NSTimeInterval?
-
-    var _executing: Bool = false
-    override var executing: Bool {
-    get {
-        return self._executing
-    }
+    public var view: JLToastView = JLToastView()
+    
+    public var text: String? {
+        get {
+            return self.view.textLabel.text?
+        }
+        set {
+            self.view.textLabel.text = newValue
+        }
     }
 
-    var _finished: Bool = false
-    override var finished: Bool {
-    get {
-        return self._finished
-    }
+    public var delay: NSTimeInterval = 0
+    public var duration: NSTimeInterval = JLToastDelay.ShortDelay
+
+    private var _executing = false
+    override public var executing: Bool {
+        get {
+            return self._executing
+        }
+        set {
+            self.willChangeValueForKey("isExecuting")
+            self._executing = newValue
+            self.didChangeValueForKey("isExecuting")
+        }
     }
 
-
-    class func makeText(text: String) -> JLToast {
+    private var _finished = false
+    override public var finished: Bool {
+        get {
+            return self._finished
+        }
+        set {
+            self.willChangeValueForKey("isFinished")
+            self._finished = newValue
+            self.didChangeValueForKey("isFinished")
+        }
+    }
+    
+    
+    public class func makeText(text: String) -> JLToast {
         return JLToast.makeText(text, delay: 0, duration: JLToastDelay.ShortDelay)
     }
-
-    class func makeText(text: String, duration: NSTimeInterval) -> JLToast {
+    
+    public class func makeText(text: String, duration: NSTimeInterval) -> JLToast {
         return JLToast.makeText(text, delay: 0, duration: duration)
     }
-
-    class func makeText(text: String, delay: NSTimeInterval, duration: NSTimeInterval) -> JLToast {
+    
+    public class func makeText(text: String, delay: NSTimeInterval, duration: NSTimeInterval) -> JLToast {
         var toast = JLToast()
         toast.text = text
         toast.delay = delay
         toast.duration = duration
         return toast
     }
-
-    init() {
-        _view = JLToastView()
-    }
-
-    func show() {
+    
+    public func show() {
         JLToastCenter.defaultCenter().addToast(self)
     }
-
-    override func start() {
-        if !NSThread.mainThread()? {
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in self.start() })
+    
+    override public func start() {
+        if !NSThread.isMainThread() {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.start()
+            })
         } else {
             super.start()
         }
     }
 
-    override func main() {
-        self.willChangeValueForKey("executing")
-        self._executing = true
-        self.didChangeValueForKey("executing")
+    override public func main() {
+        executing = true
 
         dispatch_async(dispatch_get_main_queue(), {
-            () -> Void in
-            self._view!.updateView()
-            self._view!.alpha = 0
-            UIApplication.sharedApplication().keyWindow.addSubview(self._view!)
+            self.view.updateView()
+            self.view.alpha = 0
+            UIApplication.sharedApplication().keyWindow?.subviews.first?.addSubview(self.view)
             UIView.animateWithDuration(0.5,
-                delay: self.delay!,
+                delay: self.delay,
                 options: UIViewAnimationOptions.BeginFromCurrentState,
-                animations: { () -> Void in self._view!.alpha = 1 },
-                completion: { (completed: Bool) -> Void in
-                    UIView.animateWithDuration(self.duration!,
-                        animations: { () -> Void in self._view!.alpha = 1.0001 },
-                        completion: { (completed: Bool) -> Void in
+                animations: {
+                    self.view.alpha = 1
+                },
+                completion: { completed in
+                    UIView.animateWithDuration(self.duration,
+                        animations: {
+                            self.view.alpha = 1.0001
+                        },
+                        completion: { completed in
                             self.finish()
-                            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                                self._view!.alpha = 0
-                                })
-                        })
-                })
-            })
+                            UIView.animateWithDuration(0.5, animations: {
+                                self.view.alpha = 0
+                            })
+                        }
+                    )
+                }
+            )
+        })
     }
-
-    func finish() {
-        self.willChangeValueForKey("isExecuting")
-        self._executing = false
-        self.didChangeValueForKey("isExecuting")
-
-        self.willChangeValueForKey("isFinished")
-        self._finished = true
-        self.didChangeValueForKey("isFinished")
+    
+    public func finish() {
+        executing = false
+        finished = true
     }
 }

@@ -11,8 +11,8 @@ import QuartzCore
 
 class ViewController: UIViewController {
     var flying = false
-    @IBOutlet var swiftImg : UIImageView
-    @IBOutlet var hiButton : UIButton
+    @IBOutlet var swiftImg : UIImageView!
+    @IBOutlet var hiButton : UIButton!
     @IBAction func hiButtonClicked(sender : AnyObject) {
         if (flying) {
             stopfly()

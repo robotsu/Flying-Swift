@@ -33,12 +33,10 @@
 		4A67E468194061E900B766AB /* JLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E464194061E900B766AB /* JLToast.swift */; };
 		4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E465194061E900B766AB /* JLToastCenter.swift */; };
 		4A67E46A194061E900B766AB /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E466194061E900B766AB /* JLToastView.swift */; };
-		4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A67E467194061E900B766AB /* JLTostViewController.swift */; };
 		4A832A6E195466B0003B5C0B /* UIImageView+WebCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A832A6D195466B0003B5C0B /* UIImageView+WebCache.swift */; };
 		4ABCC03A19419EAB0037E9F2 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCC03919419EAB0037E9F2 /* ActivityIndicatorViewController.swift */; };
 		4ACBA8101943172300058977 /* CollisionGravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACBA80F1943172300058977 /* CollisionGravityViewController.swift */; };
 		4AE7EA9919417B4900C45C18 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7EA9819417B4900C45C18 /* GravityViewController.swift */; };
-		4AE7EA9B1941936100C45C18 /* Box1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AE7EA9A1941936100C45C18 /* Box1@2x.png */; };
 		4AEBF71E19441099000E8180 /* AttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBF71D19441099000E8180 /* AttachmentViewController.swift */; };
 		4AEBF72219444B59000E8180 /* UIDCDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBF72119444B59000E8180 /* UIDCDecorationView.swift */; };
 /* End PBXBuildFile section */
@@ -91,12 +89,11 @@
 		4A67E464194061E900B766AB /* JLToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToast.swift; sourceTree = "<group>"; };
 		4A67E465194061E900B766AB /* JLToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastCenter.swift; sourceTree = "<group>"; };
 		4A67E466194061E900B766AB /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
-		4A67E467194061E900B766AB /* JLTostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLTostViewController.swift; sourceTree = "<group>"; };
 		4A832A6D195466B0003B5C0B /* UIImageView+WebCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebCache.swift"; sourceTree = "<group>"; };
 		4ABCC03919419EAB0037E9F2 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		4ACBA80F1943172300058977 /* CollisionGravityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionGravityViewController.swift; sourceTree = "<group>"; };
 		4AE7EA9819417B4900C45C18 /* GravityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
-		4AE7EA9A1941936100C45C18 /* Box1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box1@2x.png"; sourceTree = "<group>"; };
+		4AEAF8F91A427937006BB35F /* JLToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLToast.h; sourceTree = "<group>"; };
 		4AEBF71D19441099000E8180 /* AttachmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentViewController.swift; sourceTree = "<group>"; };
 		4AEBF72119444B59000E8180 /* UIDCDecorationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDCDecorationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,10 +204,10 @@
 		4A67E463194061E900B766AB /* JLToast */ = {
 			isa = PBXGroup;
 			children = (
+				4AEAF8F91A427937006BB35F /* JLToast.h */,
 				4A67E464194061E900B766AB /* JLToast.swift */,
 				4A67E465194061E900B766AB /* JLToastCenter.swift */,
 				4A67E466194061E900B766AB /* JLToastView.swift */,
-				4A67E467194061E900B766AB /* JLTostViewController.swift */,
 			);
 			path = JLToast;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 		4AE7EA9719417B0700C45C18 /* UIDynamicsCatalog */ = {
 			isa = PBXGroup;
 			children = (
-				4AE7EA9A1941936100C45C18 /* Box1@2x.png */,
 				4AE7EA9819417B4900C45C18 /* GravityViewController.swift */,
 				4ACBA80F1943172300058977 /* CollisionGravityViewController.swift */,
 				4AEBF71D19441099000E8180 /* AttachmentViewController.swift */,
@@ -336,7 +332,6 @@
 				4A63931A193EBF0E00E9E1CC /* Main.storyboard in Resources */,
 				4A639332193ED2A500E9E1CC /* swift.png in Resources */,
 				4A639336193EF44000E9E1CC /* weibo.JPG in Resources */,
-				4AE7EA9B1941936100C45C18 /* Box1@2x.png in Resources */,
 				4A63931C193EBF0E00E9E1CC /* Images.xcassets in Resources */,
 				4A2A665B1953209A008C40FF /* BlogTableViewCell.xib in Resources */,
 			);
@@ -365,7 +360,6 @@
 				4A0FA901195D23FB007BE198 /* BlogWebViewController.swift in Sources */,
 				4ABCC03A19419EAB0037E9F2 /* ActivityIndicatorViewController.swift in Sources */,
 				4A67E469194061E900B766AB /* JLToastCenter.swift in Sources */,
-				4A67E46B194061E900B766AB /* JLTostViewController.swift in Sources */,
 				4A5192DF194711C400FCC66C /* ItemPropertiesViewController.swift in Sources */,
 				4A3CED4E19769AF800134679 /* BlogPost.swift in Sources */,
 				4A5E8311194AEB3300E53043 /* UIDCPendulumBehavior.swift in Sources */,
@@ -454,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Flying-Swift";
@@ -491,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "Flying-Swift";
 				SDKROOT = iphoneos;
@@ -505,7 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "test-swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Flying-Swift";
 			};
@@ -517,7 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "test-swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Flying-Swift";
 			};

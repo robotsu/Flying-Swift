@@ -22,12 +22,12 @@ class DemoTableViewController: UITableViewController {
 
     
     //http://stackoverflow.com/questions/24036393/fatal-error-use-of-unimplemented-initializer-initcoder-for-class
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
-    init(style: UITableViewStyle) {
+    override init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
     }
@@ -41,6 +41,7 @@ class DemoTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        self.tableView.tableFooterView = UIView()        
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,18 +63,20 @@ class DemoTableViewController: UITableViewController {
         return celldata.count
     }
 
-    
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //var cell = self.tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
         
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: nil)
         
-        cell.textLabel.text = celldata[indexPath.row]["title"]
-        cell.detailTextLabel.text = celldata[indexPath.row]["desc"]
+        cell.textLabel!.text = celldata[indexPath.row]["title"]
+        cell.detailTextLabel!.text = celldata[indexPath.row]["desc"]
 
         return cell as UITableViewCell
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -122,10 +125,10 @@ class DemoTableViewController: UITableViewController {
     
     // #pragma mark UITableViewDelegate
     
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let vc = vcdata[celldata[indexPath.row]["title"]!]
-        self.navigationController.pushViewController(vc, animated:true)
+        self.navigationController!.pushViewController(vc!, animated:true)
     }
 
 }

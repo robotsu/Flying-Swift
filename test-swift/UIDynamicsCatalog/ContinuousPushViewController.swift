@@ -10,17 +10,17 @@ import UIKit
 
 class ContinuousPushViewController: UIViewController {
     
-    @IBOutlet var box1 : UIImageView
+    @IBOutlet var box1 : UIImageView!
     var animator : UIDynamicAnimator!
     var pushBehavior:UIPushBehavior!
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }

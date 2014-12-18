@@ -18,12 +18,12 @@ class CollisionsGravitySpringViewController: UIViewController {
     var animator : UIDynamicAnimator!
     var attachmentBehavior : UIAttachmentBehavior!
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -33,9 +33,7 @@ class CollisionsGravitySpringViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        
-        
-        let box1:UIImageView = UIImageView(image:UIImage(named:"box1"))
+        let box1:UIImageView = UIImageView(image:UIImage(named:"Box1"))
         self.attachmentView = UIImageView(image:UIImage(named:"AttachmentPoint_Mask"))
         self.square1AttachmentView = UIImageView(image:UIImage(named:"AttachmentPoint_Mask"))
         
@@ -72,11 +70,11 @@ class CollisionsGravitySpringViewController: UIViewController {
         // Visually show the attachment points
         self.attachmentView.center = attachmentBehavior.anchorPoint
         self.attachmentView.tintColor = UIColor.redColor()
-        self.attachmentView.image = self.attachmentView.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        self.attachmentView.image = self.attachmentView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         self.square1AttachmentView.center = CGPointMake(25.0, 25.0)
         self.square1AttachmentView.tintColor = UIColor.blueColor()
-        self.square1AttachmentView.image = self.square1AttachmentView.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        self.square1AttachmentView.image = self.square1AttachmentView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         // Visually show the connection between the attachment points.
         (self.view as UIDCDecorationView).trackAndDrawAttachmentFromView(self.attachmentView, toView:self.square1, withAttachmentOffset:CGPointMake(-25.0, -25.0));

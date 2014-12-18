@@ -19,16 +19,16 @@ class UIDCDecorationView: UIView {
     //! for a dash.
     var attachmentDecorationLayers:NSMutableArray?
     
-    @IBOutlet var centerPointView : UIImageView
+    @IBOutlet var centerPointView : UIImageView!
     var arrowView:UIImageView?
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-        backgroundColor = UIColor(patternImage:UIImage(named: "BackgroundTile"))
+        backgroundColor = UIColor(patternImage:UIImage(named: "BackgroundTile")!)
     }
 
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
         
@@ -49,10 +49,10 @@ class UIDCDecorationView: UIView {
     //
     func drawMagnitudeVector(length:CGFloat, angle:CGFloat, color arrowColor:UIColor, forLimitedTime temporary:Bool)
     {
-        if (!self.arrowView)
+        if (self.arrowView==nil)
         // First time initialization.
         {
-            var arrowImage:UIImage = UIImage(named:"Arrow").imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            var arrowImage:UIImage = (UIImage(named:"Arrow")!).imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
             
             var arrowImageView:UIImageView = UIImageView(image:arrowImage)
             arrowImageView.bounds = CGRectMake(0, 0, arrowImage.size.width, arrowImage.size.height)
@@ -83,13 +83,13 @@ class UIDCDecorationView: UIView {
     //
     func trackAndDrawAttachmentFromView(attachmentPointView:UIImageView, toView attachedView:UIView, withAttachmentOffset attachmentOffset:CGPoint)
     {
-        if (!self.attachmentDecorationLayers)
+        if (nil == self.attachmentDecorationLayers)
         // First time initialization.
         {
             self.attachmentDecorationLayers = NSMutableArray(capacity:4)
             for (var i=0; i<4; i++)
             {
-                var dashImage:UIImage = UIImage(named:NSString(format:"DashStyle%i", (i % 3) + 1))
+                var dashImage:UIImage = UIImage(named:NSString(format:"DashStyle%i", (i % 3) + 1))!
                 var dashLayer:CALayer = CALayer()
                 dashLayer.contents = dashImage.CGImage
                 dashLayer.bounds = CGRectMake(0, 0, dashImage.size.width, dashImage.size.height)
@@ -128,15 +128,15 @@ class UIDCDecorationView: UIView {
     {
         super.layoutSubviews()
         
-        if(self.arrowView){
+        if(self.arrowView != nil){
             self.arrowView!.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
         }
         
-        if (self.centerPointView){
+        if (self.centerPointView != nil){
             self.centerPointView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
         }
         
-        if (self.attachmentDecorationLayers)
+        if (self.attachmentDecorationLayers != nil)
         {
             // Here we adjust the line dash pattern visualizing the attachement
             // between attachmentPointView and attachedView to account for a change
@@ -226,9 +226,8 @@ class UIDCDecorationView: UIView {
     
     
     //| ----------------------------------------------------------------------------
-
-    override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: NSDictionary!, context: CMutableVoidPointer)
-    {
+    
+    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
         if (object as UIView == self.attachmentPointView! || object as UIView == self.attachedView!)
         {
             self.setNeedsLayout()

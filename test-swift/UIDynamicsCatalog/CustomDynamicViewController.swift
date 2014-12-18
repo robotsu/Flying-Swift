@@ -10,18 +10,18 @@ import UIKit
 
 class CustomDynamicViewController: UIViewController {
     
-    @IBOutlet var button1 : UIButton
+    @IBOutlet var button1 : UIButton!
     var button1Bounds : CGRect!
     var animator : UIDynamicAnimator!
 
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }

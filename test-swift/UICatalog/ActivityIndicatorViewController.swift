@@ -10,11 +10,10 @@ import UIKit
 
 class ActivityIndicatorViewController: UITableViewController {
 
-    @IBOutlet var grayStyleActivityIndicatorView : UIActivityIndicatorView
-    @IBOutlet var tintedActivityIndicatorView : UIActivityIndicatorView
-    
-    init(coder aDecoder: NSCoder!)
-    {
+    @IBOutlet var grayStyleActivityIndicatorView : UIActivityIndicatorView!
+    @IBOutlet var tintedActivityIndicatorView : UIActivityIndicatorView!
+
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

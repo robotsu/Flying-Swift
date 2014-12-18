@@ -12,9 +12,13 @@ class BlogWebViewController: UIViewController, UIWebViewDelegate {
     
     let webview = UIWebView()
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 
     override func viewDidLoad() {
@@ -43,7 +47,7 @@ class BlogWebViewController: UIViewController, UIWebViewDelegate {
     
     func loadUrl(string urlString: String) {
         let url = NSURL(string:urlString)
-        let request: NSURLRequest = NSURLRequest(URL: url)
+        let request: NSURLRequest = NSURLRequest(URL: url!)
         webview.loadRequest(request)
     }
     

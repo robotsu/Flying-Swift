@@ -10,7 +10,7 @@ import UIKit
 
 class CollisionGravityViewController: UIViewController, UICollisionBehaviorDelegate{
     
-    @IBOutlet var box1 : UIImageView
+    @IBOutlet var box1 : UIImageView!
     var animator : UIDynamicAnimator!
     
     //| ----------------------------------------------------------------------------
@@ -63,13 +63,13 @@ class CollisionGravityViewController: UIViewController, UICollisionBehaviorDeleg
     
     
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -82,7 +82,7 @@ class CollisionGravityViewController: UIViewController, UICollisionBehaviorDeleg
         // Make the square a template image so its color can be changed
         // by adjusting the tintColor of the UIImageView displaying it.
         //self.square1.image = [self.square1.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        self.box1.image = self.box1.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        self.box1.image = (self.box1.image!).imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
 
         self.box1.tintColor = UIColor.darkGrayColor();
     }

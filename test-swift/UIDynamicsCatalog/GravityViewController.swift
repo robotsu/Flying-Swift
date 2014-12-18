@@ -10,7 +10,7 @@ import UIKit
 
 class GravityViewController: UIViewController {
     
-    @IBOutlet var box1 : UIImageView
+    @IBOutlet var box1 : UIImageView!
     var animator : UIDynamicAnimator!
     
     //| ----------------------------------------------------------------------------
@@ -26,13 +26,12 @@ class GravityViewController: UIViewController {
         self.animator = animator
     }
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
-
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }

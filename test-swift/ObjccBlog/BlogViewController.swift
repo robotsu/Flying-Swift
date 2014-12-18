@@ -8,13 +8,16 @@
 
 import UIKit
 
-class BlogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class BlogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var tableview: UITableView?
-    let posts = NSMutableArray()
+    let posts:NSMutableArray = NSMutableArray()
     let identifier = "cell"
     let indicator = UIActivityIndicatorView(activityIndicatorStyle:UIActivityIndicatorViewStyle.Gray)
-    let refreshControl = UIRefreshControl()
+    let refreshControl = UIRefreshControl();
+    var page = 1
+    var pages = 1
+    var is_loading = false
     
     let wvc = BlogWebViewController(nibName:nil, bundle:nil)
 
@@ -26,6 +29,8 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.title = "blog.objcc.com"
         
         self.tableview = UITableView(frame:self.view.frame)
+        self.tableview!.separatorColor = UIColor.brownColor()
+        self.tableview!.tableFooterView = UIView()
         self.tableview!.delegate = self
         self.tableview!.dataSource = self
         self.tableview!.registerClass(UITableViewCell.self, forCellReuseIdentifier: identifier)
@@ -35,17 +40,17 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         //self.tableview!.estimatedRowHeight = 44.0
         //self.tableview!.rowHeight = UITableViewAutomaticDimension
         
-        self.view.addSubview(self.tableview)
+        self.view.addSubview(self.tableview!)
         
         self.indicator.center = self.view.center
         self.indicator.hidesWhenStopped = true
         self.view.addSubview(self.indicator)
         
         self.tableview!.addSubview(refreshControl)
-        refreshControl.addTarget(self, action:"refreshTable", forControlEvents:UIControlEvents.ValueChanged)
+        refreshControl.addTarget(self, action:"pull2refresh", forControlEvents:UIControlEvents.ValueChanged)
         
         self.indicator.startAnimating()
-        refreshTable()
+        refreshTable(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,31 +66,41 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 1
     }
     
-    func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return self.posts.count
     }
     
-    
-    func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        var cell = tableView!.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as BlogTableViewCell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as BlogTableViewCell
         
         // Configure the cell...
         
-        var index = indexPath!.row
+        var index = indexPath.row
         cell.post = self.posts[index] as BlogPost
+        
+        //load more
+        if (indexPath.row == self.posts.count - 1 && pages>=page) {
+            if !is_loading {
+                JLToast.makeText("loading page: #\(page)").show()
+                
+                self.indicator.startAnimating()
+                //println("need load more=========================\(page)")
+                self.refreshTable(false)
+            }
+        }
+        
         return cell
     }
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
-    {
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         var index = indexPath!.row
-        //JLToast.makeText("row #\(index) selected").show()
+        JLToast.makeText("row #\(index) is loading...").show()
+        let urlString = (self.posts[index] as BlogPost).post_url
         
-        let urlString = (self.posts[index] as BlogPost ).post_url
         wvc.loadUrl(string: urlString)
-        self.navigationController.pushViewController(wvc, animated:true)
+        self.navigationController!.pushViewController(wvc, animated:true)
     }
     
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
@@ -139,11 +154,11 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func getJsonData(completionHandler:(data:AnyObject)->Void) {
         
-        let url = NSURL.URLWithString("http://blog.objcc.com/api-v1/get_recent_posts/")
-        let req = NSURLRequest(URL: url)
+        let url = NSURL(string: "http://blog.objcc.com/api-v1/get_recent_posts/?page=\(page)")
+        let req = NSURLRequest(URL: url!)
         let queue = NSOperationQueue();
         NSURLConnection.sendAsynchronousRequest(req, queue: queue, completionHandler: { response, data, error in
-            if error {
+            if (error != nil) {
                 dispatch_async(dispatch_get_main_queue(), {
                         println(error)
                         completionHandler(data:NSNull())
@@ -160,16 +175,36 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
     }
     
-    func refreshTable () {
+    func pull2refresh() {
+        refreshTable(true)
+    }
+    
+    func refreshTable (is_pull:Bool) {
+        if is_loading {
+            return
+        }
+        
+        if is_pull {
+            page = 1
+        }
+        
+        is_loading = true
         getJsonData( { data in
             if data as NSObject == NSNull() {
                 JLToast.makeText("Network Error").show()
+                self.is_loading = false
                 return
             }
             
-            //println(data)
+            //println("page: \(self.page)==========================")
+            
+            if self.page == 1 {
+                //println("removeAllObjects..................")
+                self.posts.removeAllObjects()
+            }
             
             var arr = data["posts"] as NSArray
+            self.pages = data["pages"] as Int
             
             for data : AnyObject in arr {
                 
@@ -184,7 +219,6 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
                 var post = BlogPost(title: title, img_url:img_url, post_url:post_url)
                 
                 self.posts.addObject(post)
-
             }
             
             self.tableview!.reloadData()
@@ -196,6 +230,9 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
             if self.refreshControl.refreshing {
                 self.refreshControl.endRefreshing()
             }
+            
+            self.page++
+            self.is_loading = false
         })
     }
     

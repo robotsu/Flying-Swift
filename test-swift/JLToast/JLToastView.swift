@@ -19,84 +19,83 @@
 
 import UIKit
 
-class JLToastView: UIView {
-
-    var _backgroundView: UIView?
-    var _textLabel: UILabel?
-    var _textInsets: UIEdgeInsets?
-
-    init() {
+@objc public class JLToastView: UIView {
+    
+    var backgroundView = UIView()
+    var textLabel = UILabel()
+    var textInsets = UIEdgeInsetsMake(6, 10, 6, 10)
+    
+    override init() {
         super.init(frame: CGRectMake(0, 0, 100, 100))
-        _backgroundView = UIView(frame: self.bounds)
-        _backgroundView!.backgroundColor = UIColor(white: 0, alpha: 0.7)
-        _backgroundView!.layer.cornerRadius = 5
-        _backgroundView!.clipsToBounds = true
-        self.addSubview(_backgroundView!)
 
-        _textLabel = UILabel(frame: CGRectMake(0, 0, 100, 100))
-        _textLabel!.textColor = UIColor.whiteColor()
-        _textLabel!.backgroundColor = UIColor.clearColor()
-        _textLabel!.font = UIFont.systemFontOfSize(JLToastViewValue.FontSize)
-        _textLabel!.numberOfLines = 0
-        self.addSubview(_textLabel!)
-
-        _textInsets = UIEdgeInsetsMake(6, 10, 6, 10)
+        self.backgroundView.frame = self.bounds
+        self.backgroundView.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        self.backgroundView.layer.cornerRadius = 5
+        self.backgroundView.clipsToBounds = true
+        self.addSubview(self.backgroundView)
+        
+        self.textLabel.frame = CGRectMake(0, 0, 100, 100)
+        self.textLabel.textColor = UIColor.whiteColor()
+        self.textLabel.backgroundColor = UIColor.clearColor()
+        self.textLabel.font = UIFont.systemFontOfSize(JLToastViewValue.FontSize)
+        self.textLabel.numberOfLines = 0
+        self.textLabel.textAlignment = .Center;
+        self.addSubview(self.textLabel)
     }
-
+    
+    required convenience public init(coder aDecoder: NSCoder) {
+        self.init()
+    }
+    
     func updateView() {
-        let deviceWidth = UIScreen.mainScreen().bounds.size.width
-        let font = self._textLabel!.font
-        let constraintSize = CGSizeMake(deviceWidth * (280.0 / 320.0), CGFloat(INT_MAX))
-        var textLabelSize = self._textLabel!.sizeThatFits(constraintSize)
-        self._textLabel!.frame = CGRect(
-            x: self._textInsets!.left,
-            y: self._textInsets!.top,
+        let deviceWidth = CGRectGetWidth(UIScreen.mainScreen().bounds)
+        let font = self.textLabel.font
+        let constraintSize = CGSizeMake(deviceWidth * (280.0 / 320.0), CGFloat.max)
+        var textLabelSize = self.textLabel.sizeThatFits(constraintSize)
+        self.textLabel.frame = CGRect(
+            x: self.textInsets.left,
+            y: self.textInsets.top,
             width: textLabelSize.width,
             height: textLabelSize.height
         )
-        self._backgroundView!.frame = CGRect(
+        self.backgroundView.frame = CGRect(
             x: 0,
             y: 0,
-            width: self._textLabel!.frame.size.width + self._textInsets!.left + self._textInsets!.right,
-            height: self._textLabel!.frame.size.height + self._textInsets!.top + self._textInsets!.bottom
+            width: self.textLabel.frame.size.width + self.textInsets.left + self.textInsets.right,
+            height: self.textLabel.frame.size.height + self.textInsets.top + self.textInsets.bottom
         )
 
         var x: CGFloat
         var y: CGFloat
-        var width: CGFloat
-        var height: CGFloat
-        var angle: CGFloat
+        var width:CGFloat
+        var height:CGFloat
 
-        switch UIApplication.sharedApplication().statusBarOrientation {
-            case UIInterfaceOrientation.PortraitUpsideDown:
-                width = self._backgroundView!.frame.size.width
-                height = self._backgroundView!.frame.size.height
-                x = (UIScreen.mainScreen().bounds.size.width - width) / 2
+        let screenSize = UIScreen.mainScreen().bounds.size
+        let backgroundViewSize = self.backgroundView.frame.size
+
+        let orientation = UIApplication.sharedApplication().statusBarOrientation
+        let systemVersion = (UIDevice.currentDevice().systemVersion as NSString).floatValue
+
+        if UIInterfaceOrientationIsLandscape(orientation) && systemVersion < 8.0 {
+            width = screenSize.height
+            height = screenSize.width
+            y = JLToastViewValue.LandscapeOffsetY
+        } else {
+            width = screenSize.width
+            height = screenSize.height
+            if UIInterfaceOrientationIsLandscape(orientation) {
+                y = JLToastViewValue.LandscapeOffsetY
+            } else {
                 y = JLToastViewValue.PortraitOffsetY
-
-            case UIInterfaceOrientation.LandscapeRight:
-                width = self._backgroundView!.frame.size.height
-                height = self._backgroundView!.frame.size.width
-                x = (UIScreen.mainScreen().bounds.size.width - height) / 2;
-                y = UIScreen.mainScreen().bounds.size.height - width - JLToastViewValue.LandscapeOffsetY
-
-            case UIInterfaceOrientation.LandscapeLeft:
-                width = self._backgroundView!.frame.size.height
-                height = self._backgroundView!.frame.size.width
-                x = (UIScreen.mainScreen().bounds.size.width - height) / 2;
-                y = UIScreen.mainScreen().bounds.size.height - width - JLToastViewValue.LandscapeOffsetY
-
-            default:
-                width = self._backgroundView!.frame.size.width
-                height = self._backgroundView!.frame.size.height
-                x = (UIScreen.mainScreen().bounds.size.width - width) / 2
-                y = UIScreen.mainScreen().bounds.size.height - height - JLToastViewValue.PortraitOffsetY
+            }
         }
 
+        x = (width - backgroundViewSize.width) * 0.5
+        y = height - (backgroundViewSize.height + y)
         self.frame = CGRectMake(x, y, width, height);
     }
-
-    override func hitTest(point: CGPoint, withEvent event: UIEvent!) -> UIView? {
+    
+    override public func hitTest(point: CGPoint, withEvent event: UIEvent!) -> UIView? {
         return nil
     }
 }

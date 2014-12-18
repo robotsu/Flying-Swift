@@ -16,13 +16,13 @@ class CompositeBehaviorViewController: UIViewController {
     var pendulumBehavior : UIDCPendulumBehavior!
 
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -31,8 +31,8 @@ class CompositeBehaviorViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        self.box1 = UIImageView(image:UIImage(named:"box1"))
+
+        self.box1 = UIImageView(image:UIImage(named:"Box1"))
         self.attachmentPoint = UIImageView(image:UIImage(named:"AttachmentPoint_Mask"))
         
         self.box1.center = CGPointMake(self.view.center.x, 320)
@@ -44,7 +44,7 @@ class CompositeBehaviorViewController: UIViewController {
         let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
         self.attachmentPoint.tintColor = UIColor.redColor()
-        self.attachmentPoint.image = self.attachmentPoint.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        self.attachmentPoint.image = self.attachmentPoint.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         // Visually show the connection between the attachmentPoint and the square.
         (self.view as UIDCDecorationView).trackAndDrawAttachmentFromView(self.attachmentPoint, toView:self.box1, withAttachmentOffset:CGPointMake(0, -0.95 * self.box1.bounds.size.height/2))

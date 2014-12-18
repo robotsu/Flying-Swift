@@ -10,8 +10,8 @@ import UIKit
 
 class ItemPropertiesViewController: UIViewController {
     
-    @IBOutlet var square1 : UIImageView
-    @IBOutlet var square2 : UIImageView
+    @IBOutlet var square1 : UIImageView!
+    @IBOutlet var square2 : UIImageView!
     var square1PropertiesBehavior:UIDynamicItemBehavior!
     var square2PropertiesBehavior:UIDynamicItemBehavior!
     var animator : UIDynamicAnimator!
@@ -67,13 +67,13 @@ class ItemPropertiesViewController: UIViewController {
     }
     
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }

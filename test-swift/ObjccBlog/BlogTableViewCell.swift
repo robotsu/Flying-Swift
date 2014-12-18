@@ -10,10 +10,10 @@ import UIKit
 
 class BlogTableViewCell: UITableViewCell {
     
-    var post :BlogPost!
+    var post: BlogPost!
 
-    @IBOutlet var titleImage : UIImageView
-    @IBOutlet var titleLabel : UILabel
+    @IBOutlet var titleImage : UIImageView!
+    @IBOutlet var titleLabel : UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +30,7 @@ class BlogTableViewCell: UITableViewCell {
         //self.titleImage.contentMode = UIViewContentMode.ScaleToFill
         
         if post.img_url != "" {
-            println(post.title + " url: \(post.img_url)")
+            //println(post.title + " url: \(post.img_url)")
             self.titleImage.setImage(post.img_url, placeHolder: UIImage(named: "BackgroundTile"))
         }else{
             self.titleImage.image = UIImage(named: "BackgroundTile")

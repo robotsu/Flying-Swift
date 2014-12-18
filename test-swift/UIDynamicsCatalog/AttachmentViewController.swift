@@ -10,19 +10,19 @@ import UIKit
 
 class AttachmentViewController: UIViewController {
     //! The view that displays the attachment point on square1.
-    @IBOutlet var square1AttachmentView : UIImageView
+    @IBOutlet var square1AttachmentView : UIImageView!
     //! The view that the user drags to move square1.
-    @IBOutlet var attachmentView : UIImageView
-    @IBOutlet var square1 : UIView
+    @IBOutlet var attachmentView : UIImageView!
+    @IBOutlet var square1 : UIView!
     var animator : UIDynamicAnimator!
     var attachmentBehavior : UIAttachmentBehavior!
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -54,11 +54,11 @@ class AttachmentViewController: UIViewController {
         // Visually show the attachment points
         self.attachmentView.center = attachmentBehavior.anchorPoint
         self.attachmentView.tintColor = UIColor.redColor()
-        self.attachmentView.image = self.attachmentView.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        self.attachmentView.image = self.attachmentView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         self.square1AttachmentView.center = CGPointMake(25.0, 25.0)
         self.square1AttachmentView.tintColor = UIColor.blueColor()
-        self.square1AttachmentView.image = self.square1AttachmentView.image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        self.square1AttachmentView.image = self.square1AttachmentView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         // Visually show the connection between the attachment points.
         (self.view as UIDCDecorationView).trackAndDrawAttachmentFromView(self.attachmentView, toView:self.square1, withAttachmentOffset:CGPointMake(-25.0, -25.0));

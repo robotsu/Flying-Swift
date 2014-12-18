@@ -10,18 +10,18 @@ import UIKit
 
 class SnapViewController: UIViewController {
     
-    @IBOutlet var box1 : UIImageView
+    @IBOutlet var box1 : UIImageView!
     var animator : UIDynamicAnimator!
     //! Reference to the previously applied snap behavior.
     var snapBehavior:UISnapBehavior!
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
     
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
